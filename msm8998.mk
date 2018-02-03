@@ -340,8 +340,7 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \
-    android.hardware.power-service.xiaomi-libperfmgr \
-    vendor.qti.hardware.perf@1.0.vendor
+    android.hardware.power-service.xiaomi-libperfmgr
 
 # Protobuf
 PRODUCT_PACKAGES += \
