@@ -5,5 +5,6 @@ allow rild tombstone_data_file:file rw_file_perms;
 allow rild vendor_file:file ioctl;
 
 binder_call(rild, qtidataservices_app)
+get_prop(rild, vendor_pd_locater_dbg_prop)
 
 dontaudit rild diag_device:chr_file rw_file_perms;
