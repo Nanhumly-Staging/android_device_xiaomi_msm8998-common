@@ -2,6 +2,9 @@
 # system_ext props for MSM8998
 #
 
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # DPM
 persist.vendor.dpm.feature=11
 
