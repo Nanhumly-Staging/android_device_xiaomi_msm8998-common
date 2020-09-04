@@ -88,7 +88,7 @@
         <Audio codec="aac"
             bitRate="156000"
             sampleRate="48000"
-            channels="2" />
+            channels="1" />
     </EncoderProfile>
 
     <EncoderProfile quality="720p" fileFormat="mp4" duration="30">
@@ -101,7 +101,7 @@
         <Audio codec="aac"
             bitRate="156000"
             sampleRate="48000"
-            channels="2" />
+            channels="1" />
     </EncoderProfile>
 
     <EncoderProfile quality="1080p" fileFormat="mp4" duration="30">
@@ -114,7 +114,7 @@
         <Audio codec="aac"
             bitRate="156000"
             sampleRate="48000"
-            channels="2" />
+            channels="1" />
     </EncoderProfile>
 
     <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
@@ -127,7 +127,7 @@
         <Audio codec="aac"
             bitRate="156000"
             sampleRate="48000"
-            channels="2" />
+            channels="1" />
     </EncoderProfile>
 
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
