@@ -134,10 +134,6 @@ on post-fs-data
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
 
-    # Set aggressive read ahead for dm-0 and dm-1 during boot up
-    write /sys/block/dm-0/queue/read_ahead_kb 2048
-    write /sys/block/dm-1/queue/read_ahead_kb 2048
-
     # Setup permission for powerHAL
     chown system system /dev/stune/top-app/schedtune.boost
     chown system system /dev/cpu_dma_latency
@@ -158,6 +154,8 @@ on property:sys.boot_completed=1
     # Post-boot fs tuning
     write /sys/block/sda/queue/iostats 0
     write /sys/block/sde/queue/iostats 0
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sde/queue/read_ahead_kb 128
 
     # Setup final cpuset
     write /dev/cpuset/top-app/cpus 0-7
@@ -165,10 +163,6 @@ on property:sys.boot_completed=1
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
-
-    # Reset read ahead for dm-0 and dm-1 to 512kb
-    write /sys/block/dm-0/queue/read_ahead_kb 512
-    write /sys/block/dm-1/queue/read_ahead_kb 512
 
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
