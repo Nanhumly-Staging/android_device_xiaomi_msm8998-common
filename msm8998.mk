@@ -242,6 +242,9 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# Hotword enrollment
+$(call inherit-product, vendor/xiaomi/msm8998-common/google/google.mk)
+
 # IFAA manager
 PRODUCT_PACKAGES += \
     IFAAService
