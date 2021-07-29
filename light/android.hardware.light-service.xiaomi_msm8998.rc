@@ -55,3 +55,4 @@ service vendor.light-default /vendor/bin/hw/android.hardware.light-service.xiaom
     user system
     group system
     shutdown critical
+    task_profiles ServiceCapacityLow
