@@ -66,18 +66,8 @@ function blob_fixup() {
         system_ext/etc/permissions/com.qti.dpmframework.xml | system_ext/etc/permissions/dpmapi.xml)
             sed -i "s|/system/product/framework/|/system/system_ext/framework/|g" "${2}"
             ;;
-        system_ext/etc/permissions/qcrilhook.xml)
-            sed -i 's|/product/framework/qcrilhook.jar|/system/system_ext/framework/qcrilhook.jar|g' "${2}"
-            ;;
         system_ext/etc/permissions/qti_libpermissions.xml)
             sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
-            ;;
-        system_ext/lib64/lib-imscamera.so)
-            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
-            ;;
-        system_ext/lib64/lib-imsvideocodec.so)
-            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
-            grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
         system_ext/lib64/libdpmframework.so)
             grep -q "libcutils_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcutils_shim.so" "${2}"
