@@ -243,9 +243,7 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    ims_ext_common.xml \
-    libgui_shim \
-    libui_shim:64
+    ims_ext_common.xml
 
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -289,6 +287,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
+
+# Media Extensions
+PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor
 
 # Mlipay
 PRODUCT_PACKAGES += \
@@ -402,6 +404,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
 
 # USB
 PRODUCT_PACKAGES += \
