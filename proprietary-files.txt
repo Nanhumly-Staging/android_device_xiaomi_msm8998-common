@@ -712,11 +712,12 @@ vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services - LA.UM.9.6.2.r1-04100-89xx.0
--vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
-vendor/bin/time_daemon|737bbb156a23d114aafd4b4bb9adc38e8d965391
+# Time services - from LA.UM.10.2.1.r1-03400-sdm660.0
+-vendor/app/TimeService/TimeService.apk|b3e694ecbf8eccf3b503b2adfc1133f13fa0c176
+vendor/bin/time_daemon|6dca9af6adbe563783ff8d93f165f7e8ab92828c
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
-vendor/lib64/libtime_genoff.so|3f57de1aeb7aa113a0a579cebed85ab4405b9b49
+-vendor/lib/libtime_genoff.so|620254812afea89bf555e5b6bb2fad7730fb91e0
+-vendor/lib64/libtime_genoff.so|d36b80620351c55e29665204d9b8b747530019f1
 
 # Wi-Fi
 vendor/bin/cnss-daemon
