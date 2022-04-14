@@ -272,9 +272,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_msm8998
 
+ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
+endif
 
 # Media
 PRODUCT_COPY_FILES += \
