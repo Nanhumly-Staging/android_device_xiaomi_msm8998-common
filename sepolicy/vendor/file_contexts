@@ -20,7 +20,7 @@
 /system/bin/keys_migration.sh                                 u:object_r:toolbox_exec:s0
 
 # Light HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.xiaomi_msm8998 u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.xiaomi u:object_r:hal_light_default_exec:s0
 
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd@1.1                       u:object_r:hal_mlipay_default_exec:s0
