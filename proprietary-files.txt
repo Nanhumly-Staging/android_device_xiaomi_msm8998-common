@@ -425,7 +425,6 @@ vendor/bin/msm_irqbalance
 vendor/lib64/hw/keystore.msm8998.so
 
 # Listen
-vendor/lib/hw/sound_trigger.primary.msm8998.so
 vendor/lib/libsmwrapper.so
 
 # Media
