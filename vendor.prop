@@ -111,6 +111,9 @@ vidc.enc.dcvs.extra-buff-count=2
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8998
 
+# Dalvik
+dalvik.vm.systemuicompilerfilter=speed
+
 # Display
 debug.renderengine.backend=threaded
 debug.sf.enable_hwc_vds=0
