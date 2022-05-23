@@ -98,8 +98,6 @@ on post-fs-data
     chown system system /mnt/vendor/persist/PRSensorData.txt
     chmod 0600 /mnt/vendor/persist/PRSensorData.txt
 
-    setprop vold.post_fs_data_done 1
-
     # Create PERFD deamon related dirs
     mkdir /data/vendor/perfd 2770 root system
     rm /data/vendor/perfd/default_values
@@ -108,6 +106,10 @@ on post-fs-data
     write /data/vendor/radio/copy_complete 0
     chown radio radio /data/vendor/radio/copy_complete
     chmod 0660 /data/vendor/radio/copy_complete
+
+    # keep that at the end of on post-fs-data
+    # Set indication (checked by vold) that we have finished this action
+    setprop vold.post_fs_data_done 1
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
