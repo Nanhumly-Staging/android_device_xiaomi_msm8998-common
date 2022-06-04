@@ -29,6 +29,9 @@ gf.debug.                                                     u:object_r:vendor_
 persist.vendor.sys.fp.                                        u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor                                              u:object_r:vendor_fp_prop:s0
 
+# Iwlan
+persist.vendor.iwlan.logging.logcat                           u:object_r:vendor_cnd_vendor_prop:s0
+
 # Mlipay
 persist.vendor.sys.pay.ifaa                                   u:object_r:vendor_tee_listener_prop:s0
 
