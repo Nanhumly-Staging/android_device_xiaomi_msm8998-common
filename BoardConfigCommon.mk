@@ -52,6 +52,7 @@ BOARD_KERNEL_CMDLINE += loop.max_part=7
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
+TARGET_ENFORCES_QSSI := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
