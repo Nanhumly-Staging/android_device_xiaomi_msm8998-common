@@ -430,6 +430,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
+    android.hardware.wifi.hostapd@1.0.vendor \
     android.hardware.wifi@1.0-service
 
 PRODUCT_PACKAGES += \
