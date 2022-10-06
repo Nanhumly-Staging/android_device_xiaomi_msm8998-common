@@ -243,7 +243,8 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    ims_ext_common.xml
+    ims_ext_common.xml \
+    libgui_shim
 
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_PROPERTIES += \
