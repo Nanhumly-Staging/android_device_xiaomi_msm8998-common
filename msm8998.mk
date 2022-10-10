@@ -185,10 +185,6 @@ PRODUCT_COPY_FILES += \
 
 TARGET_EXCLUDES_AUDIOFX := true
 
-# DPM
-PRODUCT_PACKAGES += \
-    libcutils_shim
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
