@@ -159,11 +159,6 @@ on boot
     chmod 0660 /proc/touchpanel/double_tap_enable
     chmod 0660 /proc/touchpanel/reversed_keys_enable
 
-    # Assign TCP buffer thresholds to be ceiling value of technology maximums
-    # Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max 16777216
-    write /proc/sys/net/core/wmem_max 8388608
-
     # To prevent out of order acknowledgements from making
     # connection tracking to treat them as not belonging to
     # the connection they belong to.
@@ -192,16 +187,6 @@ service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
     task_profiles ServiceCapacityLow
-
-service vendor.rmt_storage /vendor/bin/rmt_storage
-    class core
-    user root
-    shutdown critical
-    ioprio rt 0
-
-service vendor.tftp_server /vendor/bin/tftp_server
-    class core
-    user root
 
 service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
