@@ -2,9 +2,6 @@
 # system props for MSM8998
 #
 
-# Camera
-vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap
-
 # Charger
 ro.charger.enable_suspend=true
 
