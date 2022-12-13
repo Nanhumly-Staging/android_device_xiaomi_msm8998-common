@@ -49,6 +49,7 @@ on init
 
     # Disable UFS powersaving
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 0
+    write /sys/module/lpm_levels/parameters/sleep_disabled Y
 
     # Disable thermal bcl hotplug to switch governor
     write /sys/module/msm_thermal/core_control/enabled 0
@@ -124,12 +125,12 @@ on post-fs-data
 
 on property:sys.boot_completed=1
     # Configure governor settings for little cluster
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 5000
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 1000
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
 
     # Configure governor settings for big cluster
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 5000
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 1000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 10000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
 
     # Enable UFS powersaving
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 1
@@ -148,7 +149,7 @@ on property:sys.boot_completed=1
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
-    write /dev/cpuset/camera-daemon/cpus 0-3
+    write /dev/cpuset/camera-daemon/cpus 0-7
 
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
