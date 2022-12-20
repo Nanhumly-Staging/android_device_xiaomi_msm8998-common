@@ -1,0 +1,20 @@
+#
+# system props for MSM8998
+#
+
+# Camera
+vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap
+
+# Charger
+ro.charger.enable_suspend=true
+
+# CNE
+persist.vendor.cne.feature=1
+    
+# DPM
+persist.vendor.dpm.feature=1
+
+# Radio
+DEVICE_PROVISIONED=1
+ril.subscription.types=NV,RUIM
+telephony.lteOnCdmaDevice=1
