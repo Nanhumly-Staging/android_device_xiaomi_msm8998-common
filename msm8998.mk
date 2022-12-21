@@ -390,6 +390,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Updater
+PRODUCT_PACKAGES += \
+    UpdaterOverlay
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
