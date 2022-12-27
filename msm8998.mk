@@ -197,6 +197,9 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.1.vendor
 
+# Extra
+$(call inherit-product-if-exists, vendor/extra/extra.mk)
+
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8998
@@ -400,10 +403,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-
-# Updater
-PRODUCT_PACKAGES += \
-    UpdaterOverlay
 
 # USB
 PRODUCT_PACKAGES += \
