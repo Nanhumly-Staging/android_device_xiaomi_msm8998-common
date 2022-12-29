@@ -143,6 +143,10 @@ on boot
     chown system system /sys/kernel/debug/msm_core/enable
     chown system system /sys/kernel/debug/msm_core/ptable
 
+    # Access permission for input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+
     # Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 2770 radio radio
     mkdir /dev/socket/qmux_audio 2770 media audio
