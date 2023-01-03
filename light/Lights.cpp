@@ -112,17 +112,16 @@ void Lights::setLED() {
                                                 : mLastNotificationState;
 
     rgb color(state.color);
-    uint8_t blink = (state.flashOnMs != 0 && state.flashOffMs != 0);
 
     switch (state.flashMode) {
         case FlashMode::HARDWARE:
         case FlashMode::TIMED:
             if (mWhiteLED) {
-                rc = kLEDs[WHITE].setBreath(blink);
+                rc = kLEDs[WHITE].setBreath(state, color.toBrightness());
             } else {
-                rc = kLEDs[RED].setBreath(blink && color.red);
-                rc &= kLEDs[GREEN].setBreath(blink && color.green);
-                rc &= kLEDs[BLUE].setBreath(blink && color.blue);
+                rc = kLEDs[RED].setBreath(state, color.red);
+                rc &= kLEDs[GREEN].setBreath(state, color.green);
+                rc &= kLEDs[BLUE].setBreath(state, color.blue);
             }
             if (rc) break;
             FALLTHROUGH_INTENDED;
