@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    OEMs that wish to change the below settings must do so via a runtime resource overlay package
+    and *NOT* by changing this file. This file is part of the NetworkStack mainline module.
+    The overlays must apply to the config_* values, not the default_* values. The default_*
+    values are meant to be the default when no other configuration is specified.
+    -->
+    <!-- HTTP URL for network validation, to use for detecting captive portals. -->
+    <!-- default_captive_portal_http_url is not configured as overlayable so
+         OEMs that wish to change captive_portal_http_url configuration must
+         do so via configuring runtime resource overlay to
+         config_captive_portal_http_url and *NOT* by changing or overlaying
+         this resource. It will break if the enforcement of overlayable starts.
+         -->
+    <string name="default_captive_portal_http_url" translatable="false">http://connect.rom.miui.com/generate_204</string>
+    <!-- HTTPS URL for network validation, to use for confirming internet connectivity. -->
+    <!-- default_captive_portal_https_url is not configured as overlayable so
+         OEMs that wish to change captive_portal_https_url configuration must
+         do so via configuring runtime resource overlay to
+         config_captive_portal_https_url and *NOT* by changing or overlaying
+         this resource. It will break if the enforcement of overlayable starts.
+         -->
+    <string name="default_captive_portal_https_url" translatable="false">https://connect.rom.miui.com/generate_204</string>
+</resources>
