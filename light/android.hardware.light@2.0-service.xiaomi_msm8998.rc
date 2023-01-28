@@ -9,12 +9,12 @@ on boot
     chown system system /sys/class/leds/white/ramp_step_ms
     chown system system /sys/class/leds/white/start_idx
 
-    chmod 660 /sys/class/leds/white/blink
-    chmod 660 /sys/class/leds/white/duty_pcts
-    chmod 660 /sys/class/leds/white/pause_hi
-    chmod 660 /sys/class/leds/white/pause_lo
-    chmod 660 /sys/class/leds/white/ramp_step_ms
-    chmod 660 /sys/class/leds/white/start_idx
+    chmod 640 /sys/class/leds/white/blink
+    chmod 640 /sys/class/leds/white/duty_pcts
+    chmod 640 /sys/class/leds/white/pause_hi
+    chmod 640 /sys/class/leds/white/pause_lo
+    chmod 640 /sys/class/leds/white/ramp_step_ms
+    chmod 640 /sys/class/leds/white/start_idx
 
     # Button backlight
     chown system system /sys/class/leds/button-backlight1/brightness
