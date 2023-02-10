@@ -7,3 +7,6 @@ persist.vendor.dpm.feature=11
 
 # DRM
 drm.service.enabled=true
+
+# Time services
+persist.timed.enable=true
