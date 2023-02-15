@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Erweiterte Einstellung</string>
+    <string name="advanced_settings">Erweiterte Einstellung</string>
+    <string name="advanced_settings_summary">Ausgeglichen</string>
+
+    <string name="display_title">Anzeigen</string>
+    <string name="device_doze_title">Umgebungsanzeige</string>
+
+    <!-- s2s -->
+    <string name="s2s_title">Zum Schlafengehen</string>
+    <string name="s2s_title_head">Gleiten gesteschlafen</string>
+    <string name="s2s_title_summary">Gleiten Sie unten auf dem Bildschirm in den Schlafmodus</string>
+    <string name="s2s_vib_strength_title_head">Vibrationsintensität der Gleitruhe</string>
+
+    <!-- Kcal -->
+    <string name="kcal_title">Farbkalibrierung</string>
+    <string name="kcal_summary">Monitorfarbe manuell kalibrieren</string>
+    <string name="kcal_enabled_title">Einschalten der KCAL</string>
+    <string name="kcal_enabled_summary">Einschalten der Farbkalibrierung</string>
+    <string name="kcal_red">Rott</string>
+    <string name="kcal_green">Grün</string>
+    <string name="kcal_blue">Blau</string>
+    <string name="kcal_saturation">Sättigung</string>
+    <string name="kcal_contrast">Kontrast</string>
+    <string name="menu_reset">Zurücksetzen</string>
+    <string name="kcal_color_temp">Farbtemperatur (K)</string>
+
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">Kernel-Profile</string>
+    <string name="spectrum_title">Kernel-Profile</string>
+    <string name="spectrum_summary">Auswählen der Kernel-Profile</string>
+    <string name="spectrum_dialogTitle">Auswählen der Kernel-Profile</string>
+    
+    <!-- Swap HW buttons -->
+    <string name="hw_buttons_title">Hardware-Tasten</string>
+    <string name="swap_hw_buttons_title">Tauschen der Knöpfe</string>
+    <string name="swap_hw_buttons_summary">Vertauschen die Reihenfolge der letzten und Zurück-Buttons</string>
+
+    <!-- Button brightness -->
+    <string name="btn_title">Tasten</string>
+    <string name="btn_led_title">Helligkeit</string>
+    <string name="btn_led_summary">Anpassen der Tastenhelligkeit</string>
+
+    <!-- usb fastcharge -->
+    <string name="usb_fastcharge_title">USB Schnellladung</string>
+    <string name="fastcharge_title">Einschalten der USB Schnellladung</string>
+    <string name="fastcharge_summary">Aktivieren Sie die Schnellladefunktion, wenn Sie an einen USB 3.X-Computer angeschlossen sind</string>
+
+    <!-- dirac -->
+    <string name="sound_title">Klang</string>
+    <string name="xiaomi_dirac_title">Mi Musik</string>
+    <string name="xiaomi_dirac_summary">Optimieren der Audioqualität</string>
+
+    <!-- seekbar -->
+    <string name="seekbar_no_default_value">Kein Standardwert gesetzt</string>
+    <string name="seekbar_default_value_set">Wert auf Standardwert <xliff:g id="number">%d</xliff:g> gesetzt</string>
+    <string name="seekbar_default_value_already_set">Der Standardwert ist bereits eingestellt</string>
+
+</resources>

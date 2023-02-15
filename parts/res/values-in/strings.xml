@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Pengaturan lanjutan</string>
+    <string name="advanced_settings">Pengaturan lanjutan</string>
+    <string name="advanced_settings_summary">Lanjutan</string>
+
+    <string name="display_title">Tampilan</string>
+    <string name="device_doze_title">Tampilan sekitar</string>
+
+    <!-- s2s -->
+    <string name="s2s_title">Usap untuk tidur</string>
+    <string name="s2s_title_head">Gerakan usap untuk tidur</string>
+    <string name="s2s_title_summary">Usap gerakan tidur di bagian bawah layar</string>
+    <string name="s2s_vib_strength_title_head">Getaran saat usap untuk tidur</string>
+
+    <!-- Kcal -->
+    <string name="kcal_title">Tampilan warna</string>
+    <string name="kcal_summary">Tampilan kalibrasi warna menggunakan KCAL</string>
+    <string name="kcal_enabled_title">Aktifkan KCAL</string>
+    <string name="kcal_enabled_summary">Aktifkan kalibrasi layar menggunakan KCAL</string>
+    <string name="kcal_red">Merah</string>
+    <string name="kcal_green">Hijau</string>
+    <string name="kcal_blue">Biru</string>
+    <string name="kcal_saturation">Kejenuhan</string>
+    <string name="kcal_contrast">Kontras</string>
+    <string name="menu_reset">Reset</string>
+    <string name="kcal_color_temp">Suhu Warna (K)</string>
+
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">Profil Kernel</string>
+    <string name="spectrum_title">Profil Kernel</string>
+    <string name="spectrum_summary">Pilih profil kernel</string>
+    <string name="spectrum_dialogTitle">Pilih profil kernel</string>
+
+    <!-- Swap HW buttons -->
+    <string name="hw_buttons_title">Tombol perangkat</string>
+    <string name="swap_hw_buttons_title">Tukar tombol</string>
+    <string name="swap_hw_buttons_summary">Tukar urutan tombol terbaru dan kembali</string>
+
+    <!-- Button brightness -->
+    <string name="btn_title">Tombol</string>
+    <string name="btn_led_title">Kecerahan tombol LED</string>
+    <string name="btn_led_summary">Sesuaikan kecerahan LED pada tombol</string>
+
+    <!-- usb fastcharge -->
+    <string name="usb_fastcharge_title">Pengisian cepat USB</string>
+    <string name="fastcharge_title">Aktifkan Pengisian Cepat USB</string>
+    <string name="fastcharge_summary">Aktifkan pengisian cepat saat terhubung ke komputer USB 3.X</string>
+
+    <!-- dirac -->
+    <string name="sound_title">Suara</string>
+    <string name="xiaomi_dirac_title">Mi Sound Enhancer</string>
+    <string name="xiaomi_dirac_summary">Mengoptimalkan kualitas audio</string>
+
+    <!-- seekbar -->
+    <string name="seekbar_no_default_value">Tidak ada nilai default</string>
+    <string name="seekbar_default_value_set">Nilai disetel ke default dari <xliff:g id="number">%d</xliff:g></string>
+    <string name="seekbar_default_value_already_set">Nilai default sudah ditetapkan</string>
+
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2018 AICP
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:clipToPadding="false"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:baselineAligned="false">
+
+    <LinearLayout android:id="@android:id/icon_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-4dp"
+        android:gravity="start|center_vertical"
+        android:minWidth="60dp"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="4dp">
+
+        <com.android.internal.widget.PreferenceImageView
+            android:id="@android:id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView android:id="@android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceListItem" />
+
+        <TextView android:id="@android:id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/title"
+            android:layout_alignStart="@android:id/title"
+            android:ellipsize="end"
+            android:maxLines="10"
+            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:textColor="?android:attr/textColorSecondary" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/summary"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="16dp">
+
+            <ImageView android:id="@+id/imageMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_seekbar_minus" />
+
+            <ImageView android:id="@+id/imagePlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_seekbar_plus" />
+
+            <TextView android:id="@+id/seekBarPrefUnitsRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/imagePlus"
+                android:paddingStart="3dp"
+                android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <TextView android:id="@+id/seekBarPrefValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/seekBarPrefUnitsRight"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <SeekBar android:id="@+id/seekbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/seekBarPrefValue"
+                android:layout_toEndOf="@+id/imageMinus" />
+
+            <TextView android:id="@+id/seekBarPrefUnitsLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/seekBarPrefValue"
+                android:paddingEnd="3dp"
+                android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+                android:textColor="?android:attr/textColorSecondary" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

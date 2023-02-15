@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">الإعدادات الإضافية</string>
+    <string name="advanced_settings">إعداد إضافي</string>
+    <string name="advanced_settings_summary">متقدم</string>
+
+    <string name="display_title">الشاشة</string>
+    <string name="device_doze_title">المحيطة الشاشة</string>
+
+    <!-- s2s -->
+    <string name="s2s_title">مسح للنوم</string>
+    <string name="s2s_title_head">إيماءة النوم</string>
+    <string name="s2s_title_summary">اسحب لتفعيل إيماءة النوم في الشاشة</string>
+    <string name="s2s_vib_strength_title_head">اسحب للاهتزاز</string>
+
+    <!-- Kcal -->
+    <string name="kcal_title">ألوان الشاشه</string>
+    <string name="kcal_summary">عرض معايرة الألوان باستخدام KCAL</string>
+    <string name="kcal_enabled_title">تفعيل KCAL</string>
+    <string name="kcal_enabled_summary">معايرة ألوان الشاشة عبر KCAL</string>
+    <string name="kcal_red">احمر</string>
+    <string name="kcal_green">احضر</string>
+    <string name="kcal_blue">ازرق</string>
+    <string name="kcal_saturation">التشبع</string>
+    <string name="kcal_contrast">التباين</string>
+    <string name="menu_reset">السماء</string>
+    <string name="kcal_color_temp">حرارة الألوان (K)</string>
+
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">ملفات الكيرنال</string>
+    <string name="spectrum_title">ملف الكيرنال</string>
+    <string name="spectrum_summary">اختار الكيرنال الخاص بك</string>
+    <string name="spectrum_dialogTitle">اختر الكيرنال </string>
+
+    <!-- Swap HW buttons -->
+    <string name="hw_buttons_title">أزرار الهاردوير</string>
+    <string name="swap_hw_buttons_title">أزرار التبديل</string>
+    <string name="swap_hw_buttons_summary">قم بتبديل ترتيب الأحدث وأزرار الرجوع</string>
+
+    <!-- Button brightness -->
+    <string name="btn_title">الازرار</string>
+    <string name="btn_led_title">الإضاءة</string>
+    <string name="btn_led_summary">ظبط سطوع الإضاءة للازرار </string>
+
+    <!-- usb fastcharge -->
+    <string name="usb_fastcharge_title">الشحن السريع</string>
+    <string name="fastcharge_title">تفعيل الشحن السريع</string>
+    <string name="fastcharge_summary">تفعيل الشحن السريع عند التوصيل بالحاسوب 3.x</string>
+
+    <!-- dirac -->
+    <string name="sound_title">الصوت</string>
+    <string name="xiaomi_dirac_title">Mi تحسين الصوت</string>
+    <string name="xiaomi_dirac_summary">تحسين جودة الصوت</string>
+
+    <!-- seekbar -->
+    <string name="seekbar_no_default_value">لم يتم تعيين قيمة افتراضية</string>
+    <string name="seekbar_default_value_set">تم التعين للقيمه الإفتراضية  <xliff:g id="number">%d</xliff:g></string>
+    <string name="seekbar_default_value_already_set">تم تعيين القيمة الافتراضية بالفعل</string>
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- sweep2sleep -->
+    <string-array name="s2sArray">
+        <item>डिसेबल्ड</item>
+        <item>स्वीप राईट</item>
+        <item>स्वीप लेफ्ट</item>
+        <item>स्वीप राईट य लेफ्ट</item>
+    </string-array>
+    <string-array name="s2sValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- spectrum profiles -->
+    <string-array name="spectrum_profiles">
+        <item>बैलेंस</item>
+        <item>परफॉरमेंस</item>
+        <item>बैटरी</item>
+    </string-array>
+    <string-array name="spectrum_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

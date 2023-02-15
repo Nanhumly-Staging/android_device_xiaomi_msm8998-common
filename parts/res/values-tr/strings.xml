@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="app_name">Gelişmiş ayar</string>
+	<string name="advanced_settings">Gelişmiş ayar</string>
+	<string name="advanced_settings_summary">Gelişmiş</string>
+
+    <string name="display_title">Ekran</string>
+    <string name="device_doze_title">Ortam ekranı</string>
+
+    <!-- s2s -->
+	<string name="s2s_title">Uyku moduna geç</string>
+	<string name="s2s_title_head">Uyutmak için sürükleme hareketi</string>
+	<string name="s2s_title_summary">Ekranın alt kısmında uyku moduna geçirme hareketi</string>
+	<string name="s2s_vib_strength_title_head">Uyku sürükleme titreşimi</string>
+
+    <!-- Kcal -->
+	<string name="kcal_title">Görüntü rengi</string>
+	<string name="kcal_summary">KCAL kullanarak renk kalibrasyonunu görüntüleyin</string>
+	<string name="kcal_enabled_title">"KCAL'yi etkinleştir"</string>
+	<string name="kcal_enabled_summary">KCAL kullanarak ekran kalibrasyonunu açın</string>
+	<string name="kcal_red">Kırmızı</string>
+	<string name="kcal_green">Yeşil</string>
+	<string name="kcal_blue">Mavi</string>
+	<string name="kcal_saturation">Doygunluk</string>
+	<string name="kcal_contrast">Kontrast</string>
+	<string name="menu_reset">Sıfırla</string>
+	<string name="kcal_color_temp">Renk sıcaklığı (K)</string>
+
+    <!-- Spectrum Profiles -->
+	<string name="spectrum_profile_title">Çekirdek profilleri</string>
+	<string name="spectrum_title">Çekirdek profili</string>
+	<string name="spectrum_summary">Çekirdek profilinizi seçin</string>
+	<string name="spectrum_dialogTitle">Çekirdek profilinizi seçin</string>
+
+    <!-- Swap HW buttons -->
+	<string name="hw_buttons_title">Donanım düğmeleri</string>
+	<string name="swap_hw_buttons_title">Düğmeleri değiştir</string>
+	<string name="swap_hw_buttons_summary">Son kullanılanlar ve geri düğmelerinin sırasını değiştir</string>
+
+    <!-- Button brightness -->
+	<string name="btn_title">Düğmeler</string>
+	<string name="btn_led_title">Işık parlaklığı</string>
+	<string name="btn_led_summary">Düğmelerin ışık parlaklığını ayarlayın</string>
+
+    <!-- usb fastcharge -->
+	<string name="usb_fastcharge_title">USB hızlı Şarj</string>
+	<string name="fastcharge_title">USB hızlı şarjı Eekinleştir</string>
+	<string name="fastcharge_summary">Bir bilgisayara USB 3.X bağlandığında hızlı şarjı kullanmayı etkinleştir</string>
+
+    <!-- dirac -->
+	<string name="sound_title">Ses</string>
+	<string name="xiaomi_dirac_title">Mi ses güçlendirici</string>
+	<string name="xiaomi_dirac_summary">Ses kalitesini optimize edin</string>
+
+    <!-- seekbar -->
+    <string name="seekbar_no_default_value">Varsayılan değer ayarlanmadı</string>
+    <string name="seekbar_default_value_set">Değer varsayılan olarak <xliff:g id="number">%d</xliff:g> ayarlandı</string>
+    <string name="seekbar_default_value_already_set">Varsayılan değer zaten ayarlanmış</string>
+
+</resources>

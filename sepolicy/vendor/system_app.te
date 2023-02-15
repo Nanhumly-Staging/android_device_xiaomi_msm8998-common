@@ -1,6 +1,23 @@
 allow system_app proc_pagetypeinfo:file r_file_perms;
 allow system_app proc_vmallocinfo:file r_file_perms;
 
+# FastCharge
+allow system_app sysfs_fastcharge:file rwx_file_perms;
+
+# Kcal
+allow system_app sysfs_kcal:file rwx_file_perms;
+allow system_app sysfs_kcal:dir { search };
+
+# Parts
+allow system_app sysfs_leds:dir search;
+allow system_app sysfs_graphics:dir search;
+allow system_app sysfs_graphics:file rwx_file_perms;
+
+# Reverse button
+allow system_app sysfs_sectouch:dir search;
+allow system_app sysfs:file rw_file_perms;
+allow system_app sysfs_sectouch:file rw_file_perms;
+
 # Zram Access
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;

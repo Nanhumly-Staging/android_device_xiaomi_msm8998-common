@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- sweep2sleep -->
+    <string-array name="s2sArray">
+        <item>禁用</item>
+        <item>向右划动</item>
+        <item>向左划动</item>
+        <item>向右或向左划动</item>
+    </string-array>
+
+</resources>

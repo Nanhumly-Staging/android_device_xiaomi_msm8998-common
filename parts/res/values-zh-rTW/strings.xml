@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">進階設定</string>
+    <string name="app_feature_unsupported">不支持的系統</string>
+    <string name="advanced_settings">進階設定</string>
+    <string name="advanced_settings_summary">色彩校準、按鍵控制、快速充電</string>
+
+    <string name="display_title">顯示</string>
+    <string name="device_doze_title">環境模式</string>
+
+    <!-- s2s -->
+    <string name="s2s_title">滑動休眠</string>
+    <string name="s2s_title_head">滑動休眠的手勢</string>
+    <string name="s2s_title_summary">在螢幕底部使用滑動手勢以進入休眠</string>
+    <string name="s2s_vib_strength_title_head">滑動休眠的震動強度</string>
+
+    <!-- Kcal -->
+    <string name="kcal_title">色彩校準</string>
+    <string name="kcal_summary">手動校準顯示器色彩</string>
+    <string name="kcal_enabled_title">開啟</string>
+    <string name="kcal_enabled_summary">打開色彩校準功能</string>
+    <string name="kcal_red">紅</string>
+    <string name="kcal_green">綠</string>
+    <string name="kcal_blue">藍</string>
+    <string name="kcal_saturation">飽和度</string>
+    <string name="kcal_contrast">對比度</string>
+    <string name="menu_reset">重設</string>
+    <string name="kcal_color_temp">色溫 (K)</string>
+
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">CPU 模式</string>
+    <string name="spectrum_summary">選擇 CPU 的運作模式</string>
+    <string name="spectrum_switch_summary">啟用 Spectrum</string>
+    <string name="spectrum_title">CPU 運作模式</string>
+
+    <!-- Spectrum QS tile -->
+    <string name="specturm_qs_prompt_title">快捷設置現在可用</string>
+    <string name="specturm_qs_prompt_text">通過將spectrum 添加到快捷設置，可以更快速地切換CPU 模式.</string>
+    
+    <!-- Swap HW buttons -->
+    <string name="hw_buttons_title">實體按鍵</string>
+    <string name="swap_hw_buttons_title">交換按鍵</string>
+    <string name="swap_hw_buttons_summary">交換最近任務和返回鍵的位置</string>
+
+    <!-- Button brightness -->
+    <string name="btn_title">按鍵</string>
+    <string name="btn_led_title">亮度</string>
+    <string name="btn_led_summary">自定義亮度</string>
+
+    <!-- usb fastcharge -->
+    <string name="usb_fastcharge_title">USB 快速充電</string>
+    <string name="fastcharge_title">啟用 USB 快速充電</string>
+    <string name="fastcharge_summary">連接到電腦 USB 3.X 接口時，可以使用快速充電</string>
+
+    <!-- dirac -->
+    <string name="sound_title">音效</string>
+    <string name="xiaomi_dirac_title">米音</string>
+    <string name="xiaomi_dirac_summary">使用米音來提升音質</string>
+
+    <!-- seekbar -->
+    <string name="seekbar_no_default_value">未設置任何預設選項</string>
+    <string name="seekbar_default_value_set">設定預設值為<xliff:g id="number">%d</xliff:g></string>
+    <string name="seekbar_default_value_already_set">已設置預設值</string>
+
+</resources>

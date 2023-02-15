@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- sweep2sleep -->
+    <string-array name="s2sArray">
+        <item>Desactivado</item>
+        <item>Deslizar a la derecha</item>
+        <item>Deslizar a la izquierda</item>
+        <item>Deslizar a derecha o izquierda</item>
+    </string-array>
+    <string-array name="s2sValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+</resources>

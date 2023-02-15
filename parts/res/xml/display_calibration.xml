@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2014 The OmniROM Project
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.preference.SwitchPreference
+        android:key="kcal_enabled"
+        android:title="@string/kcal_enabled_title"
+        android:summary="@string/kcal_enabled_summary"
+        android:persistent="false" />
+
+    <org.omnirom.device.Preference.KcalSeekBarPreference
+        android:key="kcal_color_temp"
+        android:title="@string/kcal_color_temp"
+        android:dependency="kcal_enabled"
+        android:persistent="false"
+        android:recycleEnabled="false"
+        android:max="7000"
+        android:min="1000"
+        android:defaultValue="6400"/>
+
+    <org.omnirom.device.Preference.KcalSeekBarPreference
+        android:key="kcal_red"
+        android:title="@string/kcal_red"
+        android:dependency="kcal_enabled"
+        android:persistent="false"
+        android:recycleEnabled="false"
+        android:max="256"
+        android:min="0"
+        android:defaultValue="256"/>
+
+    <org.omnirom.device.Preference.KcalSeekBarPreference
+        android:key="kcal_green"
+        android:title="@string/kcal_green"
+        android:dependency="kcal_enabled"
+        android:persistent="false"
+        android:recycleEnabled="false"
+        android:max="256"
+        android:min="0"
+        android:defaultValue="256"/>
+
+    <org.omnirom.device.Preference.KcalSeekBarPreference
+        android:key="kcal_blue"
+        android:title="@string/kcal_blue"
+        android:dependency="kcal_enabled"
+        android:persistent="false"
+        android:recycleEnabled="false"
+        android:max="256"
+        android:min="0"
+        android:defaultValue="256"/>
+
+    <org.omnirom.device.Preference.KcalSeekBarPreference
+        android:key="kcal_contrast"
+        android:title="@string/kcal_contrast"
+        android:dependency="kcal_enabled"
+        android:persistent="false"
+        android:recycleEnabled="false"
+        android:max="384"
+        android:min="128"
+        android:defaultValue="255"/>
+
+    <org.omnirom.device.Preference.KcalSeekBarPreference
+        android:key="kcal_saturation"
+        android:title="@string/kcal_saturation"
+        android:dependency="kcal_enabled"
+        android:persistent="false"
+        android:recycleEnabled="false"
+        android:max="383"
+        android:min="224"
+        android:defaultValue="256"/>
+</androidx.preference.PreferenceScreen>

@@ -5,6 +5,9 @@
 # DRM
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine u:object_r:hal_drm_widevine_exec:s0
 
+# FastCharge
+/sys/kernel/fast_charge/force_fast_charge                     u:object_r:sysfs_fastcharge:s0
+
 # Fingerprint
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_msm8998 u:object_r:hal_fingerprint_default_exec:s0
 /dev/goodix_fp                                                u:object_r:fingerprint_device:s0
@@ -16,6 +19,9 @@
 
 # HVDCP
 /sys/devices(/platform)?/soc/[a-z0-9]+\.i2c/i2c-[0-9]+/[0-9]+-[a-z0-9]+/[a-z0-9]+\.i2c:qcom,[a-z0-9]+@[a-z0-9]:qcom,smb[a-z0-9]+-parallel-slave@[0-9]+/power_supply/parallel(/.*)? u:object_r:sysfs_usb_supply:s0
+
+# Kcal
+/sys/devices/platform/kcal_ctrl.0(/.*)?                       u:object_r:sysfs_kcal:s0
 
 # Light HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msm8998 u:object_r:hal_light_default_exec:s0

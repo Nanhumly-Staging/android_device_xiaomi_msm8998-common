@@ -338,6 +338,10 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
@@ -361,6 +365,7 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.parts.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \

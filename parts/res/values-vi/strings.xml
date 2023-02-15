@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+     
+          http://www.apache.org/licenses/LICENSE-2.0
+          
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Nâng cao</string>
+    <string name="app_feature_unsupported">Hệ thống không được hỗ trợ</string>
+    <string name="advanced_settings">Cài đặt MI</string>
+    <string name="advanced_settings_summary">Tùy chọn tính năng đặc biệt của MI</string>
+
+    <string name="display_title">Màn hình</string>
+    <string name="device_doze_title">Màn hình Ambient</string>
+
+    <!-- s2s -->
+    <string name="s2s_title">Vuốt để ngủ</string>
+    <string name="s2s_title_head">Cử chỉ vuốt để ngủ</string>
+    <string name="s2s_title_summary">Vuốt ở cạnh dưới màn hình để tắt màn hình</string>
+    <string name="s2s_vib_strength_title_head">Rung khi vuốt</string>
+
+    <!-- Kcal -->
+    <string name="kcal_title">Màu màn hình</string>
+    <string name="kcal_summary">Hiển thị hiệu chuẩn màu bằng KCAL</string>
+    <string name="kcal_enabled_title">Mở KCAL</string>
+    <string name="kcal_enabled_summary">Bật hiệu chuẩn màn hình bằng KCAL</string>
+    <string name="kcal_red">Đỏ</string>
+    <string name="kcal_green">Lá</string>
+    <string name="kcal_blue">Lam</string>
+    <string name="kcal_saturation">Độ bão hòa</string>
+    <string name="kcal_contrast">Tương phản</string>
+    <string name="menu_reset">Đặt lại</string>
+    <string name="kcal_color_temp">Nhiệt độ màu (K)</string>
+
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">Cấu hình hạt nhân</string>
+    <string name="spectrum_summary">Chọn cấu hình hạt nhân</string>
+    <string name="spectrum_switch_summary">Bật Spectrum</string>
+    <string name="spectrum_switch_title" translatable="false">Spectrum</string>
+    <string name="spectrum_title">Cấu hình hạt nhân</string>
+
+    <!-- Spectrum QS tile -->
+    <string name="specturm_qs_prompt_title">Một tiêu đề cài đặt nhanh hiện có sẵn.</string>
+    <string name="specturm_qs_prompt_text">Bạn có thể chuyển đổi cấu hình hạt nhân nhanh chóng và dễ dàng hơn bằng cách thêm tiêu đề cấu hình vào cài đặt nhanh.</string>
+	
+    <!-- Swap HW buttons -->
+    <string name="hw_buttons_title">Phím cứng</string>
+    <string name="swap_hw_buttons_title">Hoán đổi phím</string>
+    <string name="swap_hw_buttons_summary">Hoán đổi phím trở lại và phím đa nhiệm</string>
+
+    <!-- Button brightness -->
+    <string name="btn_title">Phím</string>
+    <string name="btn_led_title">Đèn phím cứng</string>
+    <string name="btn_led_summary">Điều chỉnh đèn phím cứng</string>
+    
+    <!-- usb fastcharge -->
+    <string name="usb_fastcharge_title">Sạc nhanh USB</string>
+    <string name="fastcharge_title">Bật sạc nhanh USB</string>
+    <string name="fastcharge_summary">Cho phép sử dụng sạc nhanh khi được kết nối với máy tính USB 3.X</string>
+
+    <!-- dirac -->
+    <string name="sound_title">Âm thanh</string>
+    <string name="xiaomi_dirac_title">Tăng cường âm thanh MI</string>
+    <string name="xiaomi_dirac_summary">Tối ưu hóa chất lượng âm thanh</string>
+
+    <!-- Clear speaker -->
+    <string name="clear_speaker_title">Làm sạch loa</string>
+    <string name="clear_speaker_summary">Phát âm thanh 30 giây để làm sạch loa</string>
+    <string name="clear_speaker_description">Chạy tính năng này một hoặc hai lần nếu bạn thấy rằng loa của mình bị bụi bám nhẹ. Đặt âm lượng phương tiện ở mức tối đa.\n\nNếu loa bị chặn nhiều, hãy chạy tính năng này 2-5 lần trong khi lắc thiết bị của bạn với loa hướng xuống dưới.\n\nCẢNH BÁO: Đảm bảo rằng mọi tai nghe đã được rút ra.</string>
+
+    <!-- seekbar -->
+    <string name="seekbar_no_default_value">Không có giá trị mặc định được đặt</string>
+    <string name="seekbar_default_value_set">Giá trị được đặt thành mặc định của <xliff:g id="number">%d</xliff:g></string>
+    <string name="seekbar_default_value_already_set">Giá trị mặc định đã được đặt</string>
+
+</resources>

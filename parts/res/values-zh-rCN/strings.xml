@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">其他设置</string>
+    <string name="advanced_settings">其他设置</string>
+    <string name="advanced_settings_summary">色彩校准、按键设置、快速充电</string>
+
+    <string name="display_title">显示</string>
+    <string name="device_doze_title">环境显示</string>
+
+    <!-- s2s -->
+    <string name="s2s_title">滑动休眠</string>
+    <string name="s2s_title_head">滑动手势休眠</string>
+    <string name="s2s_title_summary">在屏幕底部滑动手势休眠</string>
+    <string name="s2s_vib_strength_title_head">滑动休眠振动强度</string>
+
+    <!-- Kcal -->
+    <string name="kcal_title">色彩校准</string>
+    <string name="kcal_summary">手动校准显示器色彩</string>
+    <string name="kcal_enabled_title">开启</string>
+    <string name="kcal_enabled_summary">打开色彩校准功能</string>
+    <string name="kcal_red">红</string>
+    <string name="kcal_green">绿</string>
+    <string name="kcal_blue">蓝</string>
+    <string name="kcal_saturation">饱和度</string>
+    <string name="kcal_contrast">对比度</string>
+    <string name="menu_reset">重置</string>
+    <string name="kcal_color_temp">色温 (K)</string>
+    
+    <!-- Swap HW buttons -->
+    <string name="hw_buttons_title">实体按键</string>
+    <string name="swap_hw_buttons_title">交换按键</string>
+    <string name="swap_hw_buttons_summary">交换最近任务键和返回键位置</string>
+
+    <!-- Button brightness -->
+    <string name="btn_title">按键</string>
+    <string name="btn_led_title">亮度</string>
+    <string name="btn_led_summary">自定义按键亮度</string>
+
+    <!-- usb fastcharge -->
+    <string name="usb_fastcharge_title">USB 快速充电</string>
+    <string name="fastcharge_title">开启 USB 快速充电</string>
+    <string name="fastcharge_summary">连接到计算机 USB 3.X 接口时，可以使用快速充电</string>
+
+    <!-- dirac -->
+    <string name="sound_title">声音</string>
+    <string name="xiaomi_dirac_title">米音</string>
+    <string name="xiaomi_dirac_summary">使用米音提升音质</string>
+
+    <!-- seekbar -->
+    <string name="seekbar_no_default_value">未设置任何默认选项</string>
+    <string name="seekbar_default_value_set">设定预设值为<xliff:g id="number">%d</xliff:g></string>
+    <string name="seekbar_default_value_already_set">已设置默认值</string>
+
+</resources>

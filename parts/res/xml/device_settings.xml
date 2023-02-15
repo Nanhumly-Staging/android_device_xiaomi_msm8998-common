@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2019 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="display"
+        android:title="@string/display_title">
+
+        <Preference
+            android:fragment="org.omnirom.device.DisplayCalibration"
+            android:icon="@drawable/ic_kcal"
+            android:key="kcal"
+            android:summary="@string/kcal_summary"
+            android:title="@string/kcal_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="hw_buttons"
+        android:title="@string/hw_buttons_title">
+
+        <org.omnirom.device.Preference.ButtonSwapPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_swap_btn"
+            android:key="buttons_swap"
+            android:summary="@string/swap_hw_buttons_summary"
+            android:title="@string/swap_hw_buttons_title" />
+
+        <org.omnirom.device.Preference.BacklightPreference
+            android:icon="@drawable/ic_led_btn"
+            android:iconSpaceReserved="true"
+            android:key="btn_brightness"
+            android:summary="@string/btn_led_summary"
+            android:title="@string/btn_led_title"
+            android:max="255"
+            android:min="0"
+            android:defaultValue="255"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="usb_fastcharge"
+        android:title="@string/usb_fastcharge_title">
+
+        <org.omnirom.device.Preference.FastChargePreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_usb_fastcharge"
+            android:key="fastcharge"
+            android:summary="@string/fastcharge_summary"
+            android:title="@string/fastcharge_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,11 @@
+<resources>
+    <declare-styleable name="SeekBarPreference">
+        <!-- preference -->
+        <attr name="unitsLeft" format="string|reference" />
+        <attr name="unitsRight" format="string|reference" />
+        <attr name="interval" format="integer" />
+        <!-- style -->
+        <attr name="value_popup_view_fg" format="color" />
+        <attr name="value_popup_view_bg" format="color" />
+    </declare-styleable>
+</resources>

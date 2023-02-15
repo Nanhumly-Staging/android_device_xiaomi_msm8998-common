@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- sweep2sleep -->
+    <string-array name="s2sArray">
+        <item>Tắt</item>
+        <item>Vuốt sang phải</item>
+        <item>Vuốt sang trái</item>
+        <item>Vuốt trái hoặc phải</item>
+    </string-array>
+    <!-- spectrum profiles -->
+    <string-array name="spectrum_profiles">
+        <item>Cân bằng</item>
+        <item>Hiệu năng</item>
+        <item>Tiết kiệm Pin</item>
+    </string-array>
+</resources>

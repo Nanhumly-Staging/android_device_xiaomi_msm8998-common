@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- sweep2sleep -->
+    <string-array name="s2sArray">
+        <item>Отключено</item>
+        <item>Свип вправо</item>
+        <item>Свип влево</item>
+        <item>Свип влево или вправо</item>
+    </string-array>
+
+    <!-- spectrum profiles -->
+    <string-array name="spectrum_profiles">
+        <item>Баланс</item>
+        <item>Производительность</item>
+        <item>Экономия заряда</item>
+    </string-array>
+</resources>

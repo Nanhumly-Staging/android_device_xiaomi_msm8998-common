@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Расширенные Настройки</string>
+    <string name="advanced_settings">Расширенные Настройки</string>
+    <string name="advanced_settings_summary">Расширенные</string>
+
+    <string name="display_title">Экран</string>
+    <string name="device_doze_title">Активный экран</string>
+
+    <!-- s2s -->
+    <string name="s2s_title">Свип для сна</string>
+    <string name="s2s_title_head">Свип для сна жест</string>
+    <string name="s2s_title_summary">Свип жест для сна внизу экрана</string>
+    <string name="s2s_vib_strength_title_head">Свип для сна вибрация</string>
+
+    <!-- Kcal -->
+    <string name="kcal_title">Цветовая схема</string>
+    <string name="kcal_summary">Калибровка цвета с использованием KCAL</string>
+    <string name="kcal_enabled_title">Включить KCAL</string>
+    <string name="kcal_enabled_summary">Включить калибровку экрана с помощью KCAL</string>
+    <string name="kcal_red">Красный</string>
+    <string name="kcal_green">Зелёный</string>
+    <string name="kcal_blue">Голубой</string>
+    <string name="kcal_saturation">Насыщенность</string>
+    <string name="kcal_contrast">Контраст</string>
+    <string name="menu_reset">Сбросить</string>
+    <string name="kcal_color_temp">Цветовая температура (K)</string>
+
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">Профили Ядра</string>
+    <string name="spectrum_title">Профиль Ядра</string>
+    <string name="spectrum_summary">Выберите профиль ядра</string>
+    <string name="spectrum_dialogTitle">Выберите профиль ядра</string>
+
+    <!-- Swap HW buttons -->
+    <string name="hw_buttons_title">Hardware buttons</string>
+    <string name="swap_hw_buttons_title">Swap buttons</string>
+    <string name="swap_hw_buttons_summary">Swap the order of recents and back buttons</string>
+
+    <!-- Button brightness -->
+    <string name="btn_title">Кнопки</string>
+    <string name="btn_led_title">Яркость подстветки</string>
+    <string name="btn_led_summary">Настроить яркость подстветки кнопок</string>
+
+    <!-- usb fastcharge -->
+    <string name="usb_fastcharge_title">Быстрая зарядка USB</string>
+    <string name="fastcharge_title">Включить быструю зарядку USB</string>
+    <string name="fastcharge_summary">Включить быструю зярядку при подключении к порту USB 3.X</string>
+
+    <!-- dirac -->
+    <string name="sound_title">Звук</string>
+    <string name="xiaomi_dirac_title">Mi Sound твикер</string>
+    <string name="xiaomi_dirac_summary">Улучшить качество аудио</string>
+
+    <!-- seekbar -->
+    <string name="seekbar_no_default_value">Значения по умолчанию не установлено</string>
+    <string name="seekbar_default_value_set">Значение по умолчанию <xliff:g id="number">%d</xliff:g></string>
+    <string name="seekbar_default_value_already_set">Значение по умолчанию уже установлено</string>
+
+</resources>

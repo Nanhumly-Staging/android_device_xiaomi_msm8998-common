@@ -1,0 +1,38 @@
+//
+// Copyright (C) 2023 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "XiaomiParts",
+
+    static_libs: [
+        "SettingsLib",
+        "androidx.core_core",
+        "androidx.appcompat_appcompat",
+        "androidx.preference_preference",
+        "androidx.annotation_annotation",
+        "co.aospa.resources",
+    ],
+
+    manifest: "AndroidManifest.xml",
+
+    srcs: ["src/**/*.java"],
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+    privileged: true,
+    resource_dirs: ["res"],
+
+    dxflags: ["--multi-dex"],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+
+    dex_preopt: {
+        enabled: true,
+    },
+
+}
