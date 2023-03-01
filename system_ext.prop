@@ -4,3 +4,7 @@
 
 # DPM
 persist.vendor.dpm.feature=11
+
+# Performance mode
+ro.perfmode=true
+ro.perf.cluster1=4
