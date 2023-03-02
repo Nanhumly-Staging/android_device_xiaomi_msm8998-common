@@ -6,7 +6,7 @@
 ro.charger.enable_suspend=true
 
 # Chipset
-ro.soc.manufacturer=Qualcomm
+ro.soc.manufacturer=QTI
 ro.soc.model=MSM8998
 
 # IMS
