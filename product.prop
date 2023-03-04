@@ -6,6 +6,9 @@
 ro.soc.manufacturer=QTI
 ro.soc.model=MSM8998
 
+# Telephony
+ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
+
 # Zram
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=180
