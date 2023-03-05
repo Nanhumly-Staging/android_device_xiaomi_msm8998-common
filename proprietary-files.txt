@@ -315,21 +315,40 @@ vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
-# DRM and SEE
-vendor/bin/qseecomd
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/librpmb.so
-vendor/lib64/libspl.so
-vendor/lib64/libssd.so
+# DRM and SEE - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/bin/qseecomd|12fde638ad4528c06fe336342862fd0ffc033dd0
+vendor/lib/libQSEEComAPI.so|961b8c99bf5d2a53b607cebf399fbdafb48c9bc6
+vendor/lib64/libGPreqcancel.so|d851bcc3e1b982d8403dc86921c5dd9274f71dc5
+vendor/lib64/libGPreqcancel_svc.so|760427f2139aec09a74b50a80153e461fbc6b272
+vendor/lib64/libQSEEComAPI.so|17cf281138050f87e29b2b71e63d131249b10f6f
+vendor/lib64/libSecureUILib.so|e9dd8017f40691925c59a074705be7cf11130780
+vendor/lib64/libStDrvInt.so|7c921ee6db896233f9ea03f1fb3a9b7d9434e7dc
+vendor/lib64/libcpion.so|602ffa6e92be0f2a19c8de782e1601135c7dd2a8
+vendor/lib64/libdrmfs.so|1654e650448a464b9de765c9ce80ba5a29e8b9c1
+vendor/lib64/libdrmtime.so|b3f024dae4aaa62c4fc33965847d1627387c6b56
+vendor/lib64/libhdcpsrm.so|8822f0408bdcc11dfc661321bfd3c253f0306e0c
+vendor/lib64/liboemcrypto.so|cff69ca64f9015e17cdcc2c45c992d262d864013
+vendor/lib64/libqisl.so|e9c402aed643ee094daaf495f1a3a1f29542d602
+vendor/lib64/librpmb.so|a5ee7dfbbae868a253d7413c866800ea1146d7c8
+vendor/lib64/libsecureui.so|eef8db680df8e9b47d4725433cd0d3886cc8aa25
+vendor/lib64/libsecureui_svcsock.so|2232f56927964f10d41868919d94711930d50ed0
+vendor/lib64/libssd.so|6dcbfc531e69a3c7eeaf21e85ac0202b8fa82d55
 
-# DRM (Widevine)
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib64/libwvhidl.so
+# DRM and SEE - from Coral - Tiramisu/TPP1.220114.016/8158200
+vendor/lib64/libops.so|3c763226ccc3b0f32e131af71a458b41bf2b3d8d
+vendor/lib64/libspl.so|f8bbe0322ce06a545f5dc79c888183ac61673b68
+
+# DRM (TUI) - from LA.UM.9.6.2.r1-04100-89xx.0
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|e8d97981d09a4e34907d13bcbbd10f03572c9218
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|933eb7026797f3dadad3d10fd69443b11f6563f3
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|16baab27397ad493e845515c20ac0c0c063c775d
+
+# DRM (Widevine) - from Coral - Tiramisu/TPP1.220114.016/8158200
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|1ad2e046be16d2ee422925dba60b8ef4d9d10e43
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|225dd006bfecf6c1dca6793fa1c13a455ce4eae6
+-vendor/etc/vintf/manifest/android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
+vendor/lib64/libwvhidl.so|aa31972bf48749785f3e5d91aaafac21f226ac87
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8998.so

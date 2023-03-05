@@ -188,7 +188,7 @@ TARGET_EXCLUDES_AUDIOFX := true
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.1.vendor
+    android.hardware.drm@1.4.vendor
 
 # Extra
 $(call inherit-product-if-exists, vendor/extra/extra.mk)
