@@ -103,7 +103,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
-TARGET_USES_INTERACTION_BOOST := true
 
 # Properties
 TARGET_PRODUCT_PROP += $(PLATFORM_PATH)/product.prop
