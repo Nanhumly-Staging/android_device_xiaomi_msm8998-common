@@ -27,7 +27,9 @@ PRODUCT_COMPRESSED_APEX := false
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Overlay
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/no_rro_overlays
 DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/no_rro_overlays \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-exthm
 
