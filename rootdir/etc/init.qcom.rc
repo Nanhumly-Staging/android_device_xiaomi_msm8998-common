@@ -179,8 +179,9 @@ on boot
     # Create directory used for display
     mkdir /persist/display 0770 system graphics
 
-    start vendor.qcrild
-    start vendor.qcrild2
+    # RIL
+    enable vendor.qcrild
+    enable vendor.qcrild2
 
 on property:sys.boot_completed=1
     # Used by sound trigger HAL
