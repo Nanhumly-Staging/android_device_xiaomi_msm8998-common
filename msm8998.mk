@@ -299,10 +299,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor
 
-# Mlipay
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.mlipay@1.1.vendor:64
-
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
