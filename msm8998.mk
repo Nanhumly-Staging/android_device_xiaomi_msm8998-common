@@ -210,6 +210,10 @@ $(call inherit-product-if-exists, vendor/extra/extra.mk)
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8998
 
+# FM
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.fm@1.0.vendor
+
 # fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor
