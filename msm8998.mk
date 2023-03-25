@@ -381,7 +381,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     CarrierConfigOverlay \
-    librmnetctl \
     libxml2
 
 # Seccomp policy
