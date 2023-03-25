@@ -6,6 +6,9 @@
 
 android_app {
     name: "XiaomiParts",
+    defaults: [
+         "SettingsLibDefaults",
+     ],
 
     static_libs: [
         "SettingsLib",
@@ -13,7 +16,6 @@ android_app {
         "androidx.appcompat_appcompat",
         "androidx.preference_preference",
         "androidx.annotation_annotation",
-        "co.aospa.resources",
     ],
 
     manifest: "AndroidManifest.xml",
