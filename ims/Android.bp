@@ -1,0 +1,28 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_defaults {
+    name: "libgui_shim_defaults",
+    shared_libs: ["libutils"],
+    srcs: [
+        "GraphicBufferProducer.cpp",
+        "SurfaceComposerClient.cpp",
+    ],
+}
+
+cc_library {
+    name: "libgui_shim",
+    defaults: ["libgui_shim_defaults"],
+    shared_libs: ["libgui"],
+    system_ext_specific: true,
+}
+
+cc_library {
+    name: "libgui_shim_vendor",
+    defaults: ["libgui_shim_defaults"],
+    shared_libs: ["libgui_vendor"],
+    vendor: true,
+}
