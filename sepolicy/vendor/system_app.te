@@ -15,7 +15,6 @@ allow system_app sysfs_graphics:file rwx_file_perms;
 
 # Reverse button
 allow system_app sysfs_sectouch:dir search;
-allow system_app sysfs:file rw_file_perms;
 allow system_app sysfs_sectouch:file rw_file_perms;
 
 # Zram Access
