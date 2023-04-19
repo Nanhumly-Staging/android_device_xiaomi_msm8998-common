@@ -146,6 +146,9 @@ persist.vendor.qti.telephony.vt_cam_interface=1
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 
+# Network manager
+persist.vendor.data.iwlan.enable=true
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.qti.core_ctl_max_cpu=4
