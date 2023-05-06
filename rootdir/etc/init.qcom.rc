@@ -50,6 +50,9 @@ on post-fs-data
     # Create folder of camera
     mkdir /data/vendor/camera 0770 camera camera
 
+    # Create folder of nfc
+    mkdir /data/vendor/nfc 0770 nfc nfc
+
     # Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
 
