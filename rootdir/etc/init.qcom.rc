@@ -169,10 +169,6 @@ on boot
     # Create directory used for display
     mkdir /persist/display 0770 system graphics
 
-    # RIL
-    enable vendor.qcrild
-    enable vendor.qcrild2
-
 on property:sys.boot_completed=1
     # Used by sound trigger HAL
     chown media audio /sys/kernel/wdsp0/boot
@@ -248,6 +244,15 @@ service vendor.panel-info /vendor/bin/init.panel_info.sh
     class core
     user root
     oneshot
+
+service qcom-c_main-sh /vendor/bin/init.class_main.sh
+    class main
+    user root
+    group root system
+    oneshot
+
+on property:vold.decrypt=trigger_restart_framework
+    start qcom-c_main-sh
 
 service charger /system/bin/charger
     class charger
