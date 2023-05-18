@@ -65,12 +65,6 @@ on post-fs-data
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
 
-    # Create netmgr log dir
-    mkdir /data/vendor/netmgr 0770 radio radio
-
-    # Create QTI dir for logs
-    mkdir /data/vendor/dataqti 0770 radio radio
-
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
 
@@ -153,9 +147,6 @@ on boot
     mkdir /dev/socket/qmux_bluetooth 2770 bluetooth bluetooth
     mkdir /dev/socket/qmux_gps 2770 gps gps
 
-    # Create NETMGR daemon socket area
-    mkdir /dev/socket/netmgr 0750 radio radio
-
     # Touchscreen
     chown system system /proc/touchpanel/double_tap_enable
     chown system system /proc/touchpanel/reversed_keys_enable
@@ -214,16 +205,6 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
-    task_profiles ServiceCapacityLow
-
-service vendor.netmgrd /vendor/bin/netmgrd
-    class main
-    task_profiles ServiceCapacityLow
-
-service vendor.dataqti /vendor/bin/qti
-    class main
-    user radio
-    group radio oem_2901 diag usb net_admin
     task_profiles ServiceCapacityLow
 
 service vendor.sensors /vendor/bin/sensors.qti
