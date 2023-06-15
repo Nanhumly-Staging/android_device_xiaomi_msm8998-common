@@ -337,7 +337,7 @@ vendor/lib64/libssd.so|6dcbfc531e69a3c7eeaf21e85ac0202b8fa82d55
 vendor/lib64/libops.so|3c763226ccc3b0f32e131af71a458b41bf2b3d8d
 vendor/lib64/libspl.so|f8bbe0322ce06a545f5dc79c888183ac61673b68
 
-# DRM (TUI) - from LA.UM.9.6.2.r1-04100-89xx.0
+# DRM (TUI) - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|e8d97981d09a4e34907d13bcbbd10f03572c9218
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|933eb7026797f3dadad3d10fd69443b11f6563f3
