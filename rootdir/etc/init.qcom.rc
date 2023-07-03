@@ -50,6 +50,10 @@ on post-fs-data
     # Create folder of camera
     mkdir /data/vendor/camera 0770 camera camera
 
+    # Create folder of nfc
+    mkdir /data/vendor/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc/param 0770 nfc nfc
+
     # Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
 
@@ -61,12 +65,6 @@ on post-fs-data
     mkdir /data/vendor/wifi 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
-
-    # Create netmgr log dir
-    mkdir /data/vendor/netmgr 0770 radio radio
-
-    # Create QTI dir for logs
-    mkdir /data/vendor/dataqti 0770 radio radio
 
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
@@ -150,9 +148,6 @@ on boot
     mkdir /dev/socket/qmux_bluetooth 2770 bluetooth bluetooth
     mkdir /dev/socket/qmux_gps 2770 gps gps
 
-    # Create NETMGR daemon socket area
-    mkdir /dev/socket/netmgr 0750 radio radio
-
     # Touchscreen
     chown system system /proc/touchpanel/double_tap_enable
     chown system system /proc/touchpanel/reversed_keys_enable
@@ -175,10 +170,6 @@ on boot
     # Create directory used for display
     mkdir /persist/display 0770 system graphics
 
-    # RIL
-    enable vendor.qcrild
-    enable vendor.qcrild2
-
 on property:sys.boot_completed=1
     # Used by sound trigger HAL
     chown media audio /sys/kernel/wdsp0/boot
@@ -190,11 +181,6 @@ on property:sys.boot_completed=1
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
-
-on property:persist.sys.radio.mobile_data_swap=1
-    restart vendor.qcrild
-    exec /bin/sleep 2
-    restart vendor.qcrild2
 
 service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
@@ -216,16 +202,6 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
-    task_profiles ServiceCapacityLow
-
-service vendor.netmgrd /vendor/bin/netmgrd
-    class main
-    task_profiles ServiceCapacityLow
-
-service vendor.dataqti /vendor/bin/qti
-    class main
-    user radio
-    group radio oem_2901 diag usb net_admin
     task_profiles ServiceCapacityLow
 
 service vendor.sensors /vendor/bin/sensors.qti
@@ -253,6 +229,9 @@ service vendor.loc_launcher /vendor/bin/loc_launcher
     group gps
     task_profiles ServiceCapacityLow
 
+on property:persist.sys.xtra-daemon.enabled=*
+    restart vendor.loc_launcher
+
 service vendor.qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
@@ -269,6 +248,15 @@ service vendor.panel-info /vendor/bin/init.panel_info.sh
     class core
     user root
     oneshot
+
+service qcom-c_main-sh /vendor/bin/init.class_main.sh
+    class main
+    user root
+    group root system
+    oneshot
+
+on property:vold.decrypt=trigger_restart_framework
+    start qcom-c_main-sh
 
 service charger /system/bin/charger
     class charger
@@ -293,8 +281,10 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     class hal
     user audioserver
     # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
-    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock system
+    group audio camera context_hub drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock system
     capabilities BLOCK_SUSPEND SYS_NICE
+    # setting RLIMIT_RTPRIO allows binder RT priority inheritance
+    rlimit rtprio 10 10
     ioprio rt 4
     task_profiles ProcessCapacityHigh HighPerformance
     onrestart restart audioserver

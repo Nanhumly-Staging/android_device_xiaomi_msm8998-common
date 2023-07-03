@@ -95,7 +95,7 @@ bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
-vendor.qcom.bluetooth.soc=cherokee
+persist.vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 persist.camera.stats.test=5
@@ -201,9 +201,6 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
 # Force triple frame buffers
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-
-# Time services
-persist.vendor.delta_time.enable=true
 
 # WFD
 persist.sys.wfd.virtual=0
