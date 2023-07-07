@@ -2,10 +2,6 @@
 # system_ext props for MSM8998
 #
 
-# Blur
-ro.launcher.blur.appLaunch=1
-ro.surface_flinger.supports_background_blur=1
-
 # DPM
 persist.vendor.dpm.feature=11
 
