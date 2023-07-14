@@ -29,7 +29,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-pe
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
@@ -272,10 +272,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_msm8998
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
@@ -420,10 +416,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor_32 \
     libstdc++.vendor
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # Wifi
 PRODUCT_PACKAGES += \
