@@ -45,6 +45,9 @@ vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libqtigef.so
 
+# Audio libraries - from cheetah-user 13 TQ3A.230605.012 10204971 release-keys
+vendor/lib/soundfx/libspatialaudio.so|b26727b8887dad56f5e183f7145487c88bd2f065
+
 # Bluetooth - from sld_sprout RKQ1.210607.001-00WW_3_490
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|07d96d0d3c4a500b14ea3c97e02b9eb5ee2bbc4d
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
