@@ -155,7 +155,7 @@ volatile int32_t LocApiBase::mMsgTaskRefCount = 0;
 LocApiBase::LocApiBase(LOC_API_ADAPTER_EVENT_MASK_T excludedMask,
                        ContextBase* context) :
     mContext(context),
-    mMask(0), mExcludedMask(excludedMask), mEngineLockState(ENGINE_LOCK_STATE_ENABLED)
+    mMask(0), mExcludedMask(excludedMask)
 {
     memset(mLocAdapters, 0, sizeof(mLocAdapters));
 
@@ -615,12 +615,6 @@ void LocApiBase::reportLatencyInfo(GnssLatencyInfo& gnssLatencyInfo)
     TO_ALL_LOCADAPTERS(mLocAdapters[i]->reportLatencyInfoEvent(gnssLatencyInfo));
 }
 
-void LocApiBase::reportEngineLockStatus(EngineLockState engineLockState)
-{
-    // loop through adapters, and deliver to the All handling adapter.
-    TO_ALL_LOCADAPTERS(mLocAdapters[i]->handleEngineLockStatusEvent(engineLockState));
-}
-
 enum loc_api_adapter_err LocApiBase::
    open(LOC_API_ADAPTER_EVENT_MASK_T /*mask*/)
 DEFAULT_IMPL(LOC_API_ADAPTER_ERR_SUCCESS)
@@ -906,33 +900,33 @@ void LocApiBase::
 DEFAULT_IMPL()
 
 void LocApiBase::
-    getRobustLocationConfig(uint32_t sessionId, LocApiResponse* /*adapterResponse*/)
+    getRobustLocationConfig(uint32_t /*sessionId*/, LocApiResponse* /*adapterResponse*/)
 DEFAULT_IMPL()
 
 void LocApiBase::
-    configMinGpsWeek(uint16_t minGpsWeek,
+    configMinGpsWeek(uint16_t /*minGpsWeek*/,
                      LocApiResponse* /*adapterResponse*/)
 DEFAULT_IMPL()
 
 void LocApiBase::
-    getMinGpsWeek(uint32_t sessionId, LocApiResponse* /*adapterResponse*/)
+    getMinGpsWeek(uint32_t /*sessionId*/, LocApiResponse* /*adapterResponse*/)
 DEFAULT_IMPL()
 
 LocationError LocApiBase::
-    setParameterSync(const GnssConfig& gnssConfig)
+    setParameterSync(const GnssConfig& /*gnssConfig*/)
 DEFAULT_IMPL(LOCATION_ERROR_SUCCESS)
 
 void LocApiBase::
-    getParameter(uint32_t sessionId, GnssConfigFlagsMask flags, LocApiResponse* /*adapterResponse*/)
+    getParameter(uint32_t /*sessionId*/, GnssConfigFlagsMask /*flags*/, LocApiResponse* /*adapterResponse*/)
 DEFAULT_IMPL()
 
 void LocApiBase::
-    configConstellationMultiBand(const GnssSvTypeConfig& secondaryBandConfig,
+    configConstellationMultiBand(const GnssSvTypeConfig& /*secondaryBandConfig*/,
                                  LocApiResponse* /*adapterResponse*/)
 DEFAULT_IMPL()
 
 void LocApiBase::
-    getConstellationMultiBandConfig(uint32_t sessionId, LocApiResponse* /*adapterResponse*/)
+    getConstellationMultiBandConfig(uint32_t /*sessionId*/, LocApiResponse* /*adapterResponse*/)
 DEFAULT_IMPL()
 
 int64_t ElapsedRealtimeEstimator::getElapsedRealtimeEstimateNanos(int64_t curDataTimeNanos,
