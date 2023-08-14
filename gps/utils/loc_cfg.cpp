@@ -88,7 +88,7 @@ const char LOC_PATH_XTWIFI_CONF[] = LOC_PATH_XTWIFI_CONF_STR;
 const char LOC_PATH_QUIPC_CONF[] = LOC_PATH_QUIPC_CONF_STR;
 
 bool isXtraDaemonEnabled() {
-    bool enabled = property_get_bool("persist.sys.xtra-daemon.enabled", false);
+    bool enabled = property_get_bool("persist.sys.xtra-daemon.enabled", true);
     LOC_LOGe("xtra-daemon enabled: %d\n", enabled);
     return enabled;
 }
