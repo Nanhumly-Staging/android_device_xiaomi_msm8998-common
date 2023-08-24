@@ -620,6 +620,9 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql|fcb2cba3bfd71
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|0fdf4b6ccb48906b37885e060429f79c9fd6bdbf
 vendor/radio/qcril_database/qcril.db|86286c24a227cb968dac1f7ccfe0ad26fe4fd462
 
+# Radio - from FP3-REL-6.A.018.0-gms-1f4b2a90-user
+system_ext/app/datastatusnotification/datastatusnotification.apk|abe3343065ffcfe3c315258831d073c6086139ae
+
 # Radio - IMS - from sld_sprout RKQ1.210607.001-00WW_3_490
 system_ext/app/imssettings/imssettings.apk|516d8be0f869e1733d0287722897420c57c73be5
 system_ext/app/uceShimService/uceShimService.apk|cdffe76fca53131f68eb996005a35304b924206e
