@@ -203,8 +203,8 @@ vendor/lib/libois_bu63164.so
 vendor/bin/hvdcp_opti
 
 # CNE - from sld_sprout RKQ1.210607.001-00WW_3_490
-vendor/app/CneApp/CneApp.apk|39144b727c1897cb52edf6c725c2eed6ca83eb4f
-vendor/app/IWlanService/IWlanService.apk|74779cb40af74d7689c5e63162490506034b8550
+vendor/app/CneApp/CneApp.apk|fa57f899f8cdd8d8ad441b06e0f494ff5237519c
+vendor/app/IWlanService/IWlanService.apk|cc19c2f66063f7c8807a03a8c20de85abe263cb6
 vendor/bin/cnd|07829b294562037b779a6e7244972d7c24e758a5
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
@@ -264,7 +264,7 @@ vendor/lib64/vendor.qti.latency@2.1.so|47f0d25338274af94764be9d39eabef8cf5ca790
 
 # Dolby - from Dolby Atmos Moto G52 Magisk Module
 odm/bin/hw/vendor.dolby_v3_6.hardware.dms360@2.0-service|da39a3ee5e6b4b0d3255bfef95601890afd80709
-system_ext/app/MotoSignatureApp/MotoSignatureApp.apk|98027bccd4ec14cb7887cde068e35f6b0ecd0a44
+system_ext/app/MotoSignatureApp/MotoSignatureApp.apk|685162a581ef41d54444c29362ec665a4e1eba80
 system_ext/etc/permissions/com.motorola.frameworks.core.addon.xml|b98f53235c8d4c1962d3b279840e2a074d0ddd10
 system_ext/etc/permissions/com.motorola.motosignature.xml|e94cdcfd1b92b6bd1d0b53c3c2ed8bffe362e6ac
 system_ext/etc/permissions/com.motorola.software.dolbyui.xml|d5c25b2522094346257a5ff0f4317c992b54d1fc
@@ -278,14 +278,14 @@ system_ext/etc/sysconfig/config-com.dolby.daxservice.xml|f2955d9e3d5f75b40fdc822
 system_ext/etc/sysconfig/config-com.motorola.android.providers.settings.xml|1f804d789dd7c8b7657a6f07e23bcac1ce5c701c
 system_ext/etc/sysconfig/config-com.motorola.dolby.dolbyui.xml|0131f1a5a5c2d2fc09a6bc75ff4e25b74785ec2a
 system_ext/etc/sysconfig/config-com.motorola.motosignature.app.xml|5b2c138d4be962f052700fb3ca00d822bbf836da
-system_ext/framework/com.motorola.frameworks.core.addon.jar|8431ff519b0a3e02411a0096898ee8acb372b9b7
-system_ext/framework/com.motorola.motosignature.jar|1607b24909a030ddec7f05b91356e6b2d76c0b6b
-system_ext/framework/moto-checkin.jar|989119b230c01ba95341d29de45e38120a68f394
-system_ext/framework/moto-settings.jar|0ebdf871ededa1eb9c5186bdb4a9055d89594779
-system_ext/framework/moto.jar|6c797a7f205f2ce5d939c000f21c6625daf0c33f
-system_ext/priv-app/MotoDolbyDax3/MotoDolbyDax3.apk;OVERRIDES=MusicFX|16a795a3ea09740d75740ec2b6ef45176e902c2b
-system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk|25deb5bdb18d55dee1b9bd1de2ba46e353c62780
-system_ext/priv-app/daxService/daxService.apk|c9f688a32c81aace7207bd67d14b926b2662ba98
+system_ext/framework/com.motorola.frameworks.core.addon.jar|1ecd773b904a955bac172b32db4e4141e0bd6a1f
+system_ext/framework/com.motorola.motosignature.jar|2107a208a83a1c87165ed75d3719e2925faa37db
+system_ext/framework/moto-checkin.jar|bcd6045d807fe25e570bfd35a5977bf75cee68a2
+system_ext/framework/moto-settings.jar|3d0b1a0ce1edaae4cf5e61f5bbab38cf3a5ed434
+system_ext/framework/moto.jar|aa5586761e334c32931e0a3dac5834b2003ee9c4
+system_ext/priv-app/MotoDolbyDax3/MotoDolbyDax3.apk;OVERRIDES=MusicFX|5024782edd22a48fbaba803add5753acc7b14b4d
+system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk|86388ca9b9a8f77c4a62839fcf4e355f80e7b157
+system_ext/priv-app/daxService/daxService.apk|8ed13897babe79b3ed2b6dc7ada9e5c2a132193a
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|8215768638794162db3bb76e43045926fcbb4b0b
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 vendor/lib/soundfx/libswdap.so|810d0e266e4a77f06cba72fe8bdde2e1ede4f9f9
@@ -354,15 +354,15 @@ vendor/lib64/libspl.so|f8bbe0322ce06a545f5dc79c888183ac61673b68
 system_ext/lib/vendor.qti.hardware.tui_comm@1.0.so|dc30ce560414117dc32ab331ff7737d21347005d
 system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so|b42fa9db67cf5050c3ae4e93ea3954ea2bff4bdb
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|cf3d3d18a169c2fdb601aece7d8ec09df0d88bf7
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|a6bd2ff94dd9a50ddb3fa5e24aa5df0d90b072ed
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|88a8ac5aa140029762836bd2bba0984ead548756
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|19599f6a2afd8a218a2a1d3bb214575db98e3c53
 
 # DRM (Widevine) - from Coral - Tiramisu/TPP1.220114.016/8158200
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|1ad2e046be16d2ee422925dba60b8ef4d9d10e43
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|225dd006bfecf6c1dca6793fa1c13a455ce4eae6
--vendor/etc/vintf/manifest/android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
-vendor/lib64/libwvhidl.so|aa31972bf48749785f3e5d91aaafac21f226ac87
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|40007c2086cb435d36b38de089cdfa4f38941b4e
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|e30c2941ce57abdb4def9abd6aceb83b21a3a97b
+-vendor/etc/vintf/manifest/android.hardware.drm@1.4-service.widevine.xml|f7bdeffa1778a8c452ee56113a352cffa651a9cd
+vendor/lib64/libwvhidl.so|8ffc9cfc0ca2abc0e7bbde94c61961b1fef45e6f
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8998.so
@@ -554,12 +554,12 @@ vendor/lib/libqrtr.so|69c36527f12187cf6c0111124935f0b60a9d1145
 vendor/lib64/libqrtr.so|c7ca700c1f4759aa673a6c5478ca492487bbea70
 
 # Radio - from sld_sprout RKQ1.210607.001-00WW_3_490
-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|692d3d439cdee075729799e571113f6f8fe3e786
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|9b519ea7357ddd3d09b8f201252a8d3bd16acd5d
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/telephonyservice.xml|b7831598d3c19c6ce4ef431d1cc44d94c3c35a8d
 system_ext/framework/qcrilhook.jar|f2888f922b8347417dfa86741feb8348795fce6f
 system_ext/framework/qti-telephony-common.jar|0db037785928aae043e9be7f49bddbefad43fbc3
-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|26b725924d62c7fbd0ed72fe1f0786b18b2f8f36
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|54c44f24b47206e4897c7a22f81e40e4ea1da592
 vendor/bin/hw/qcrild|77d0168fbad7db01eec8abd9df25f19c05411eb4
 vendor/bin/ATFWD-daemon|e1d493d251232dc7787e8f9fe76c027830c63855
 vendor/bin/adpl|6bbc42cea3f882498e9bae6563659dc6538340e7
@@ -631,8 +631,8 @@ vendor/radio/qcril_database/qcril.db|86286c24a227cb968dac1f7ccfe0ad26fe4fd462
 system_ext/app/datastatusnotification/datastatusnotification.apk|abe3343065ffcfe3c315258831d073c6086139ae
 
 # Radio - IMS - from sld_sprout RKQ1.210607.001-00WW_3_490
-system_ext/app/imssettings/imssettings.apk|516d8be0f869e1733d0287722897420c57c73be5
-system_ext/app/uceShimService/uceShimService.apk|cdffe76fca53131f68eb996005a35304b924206e
+system_ext/app/imssettings/imssettings.apk|edcf9bb934e103834c4796f0e8257bc0f08a34dd
+system_ext/app/uceShimService/uceShimService.apk|76eee011c6cf2d61c9bf5a334dc89c3373382ab4
 system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so|edf4941798ce879de80112d3453dba5b541dd9dd
 system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so|2359b4a42b9f009cc574b1b149040fd7751d3bab
 system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so|e10101f34b09634689aaba2f58521af2e5c8690f
@@ -646,7 +646,7 @@ system_ext/lib64/lib-imsvt.so|4f96cc5f27551d0b6cb11ad6447d9ce8829dde47
 system_ext/lib64/lib-imsvtextutils.so|336c0ffed49a0a4605f41b488771ee0217fa80f0
 system_ext/lib64/libimsmedia_jni.so|f8be2575f8eaef8bb89a4bc049381ebffe857831
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
-system_ext/priv-app/ims/ims.apk|bed959752f39386d6a7045f8cf96226a14e31dfd
+system_ext/priv-app/ims/ims.apk|c166b3ae80438f2098a0aa7b1acdae915fec0382
 vendor/bin/ims_rtp_daemon|ed5c13c758080d79a9371061d53127d406475614
 vendor/bin/imsdatadaemon|701f9a2eaa2674bcaa7e69817bdcb656e99fcac9
 vendor/bin/imsqmidaemon|5fde955e71392479b2f3e6aaf6005fa54b618678
@@ -735,7 +735,7 @@ vendor/lib64/libthermalioctl.so
 -vendor/lib/libtime_genoff.so|61f2498b119a9991f86e350c7ed8fe1d2ffbab20
 -vendor/lib64/libtime_genoff.so|118c31a2a35bd82b8d392bc09d6eb37448389437
 vendor/bin/time_daemon|35147f3f1a63f45d4449b28177ac3495d375b4fc
-vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
+vendor/etc/init/init.time_daemon.rc|3f9e4f94dd88419b125d8702b7918ce0a75753ed
 
 # Wi-Fi
 vendor/bin/cnss-daemon
