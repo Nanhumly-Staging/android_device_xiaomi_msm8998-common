@@ -21,6 +21,16 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
+# Alarm - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|3b28fc11b84dea890fc57c2d0d92e0b1ceb047f2
+system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|53c8e43e6ab1db1c3824626b1503b92991c24e7e
+system_ext/lib64/vendor.qti.hardware.alarm@1.0.so|1dc1a86f4061cba58460422b0a63d24b87e23921
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|461a834ada2a9f9feb8421d1dba11f85842b9772
+vendor/bin/power_off_alarm|911a408ebcfe448f697225e4c39573704c41544f
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|7de458829e1d4f5157b291dab5fdb25546df08fc
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|6918a6a6d66509568ced685917c891038cec3d13
+
 # ANT+ - from sld_sprout RKQ1.210607.001-00WW_3_490
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|87dc1a131534659173e71e108e7a3ffe6325845f
 
@@ -34,6 +44,9 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libqtigef.so
+
+# Audio libraries - from google/cheetah/cheetah:13/TQ3A.230805.001/10316531:user/release-keys
+vendor/lib/soundfx/libspatialaudio.so|b26727b8887dad56f5e183f7145487c88bd2f065
 
 # Bluetooth - from sld_sprout RKQ1.210607.001-00WW_3_490
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|07d96d0d3c4a500b14ea3c97e02b9eb5ee2bbc4d
@@ -189,8 +202,8 @@ vendor/lib/libois_bu63164.so
 vendor/bin/hvdcp_opti
 
 # CNE - from sld_sprout RKQ1.210607.001-00WW_3_490
-vendor/app/CneApp/CneApp.apk|39144b727c1897cb52edf6c725c2eed6ca83eb4f
-vendor/app/IWlanService/IWlanService.apk|74779cb40af74d7689c5e63162490506034b8550
+vendor/app/CneApp/CneApp.apk|fa57f899f8cdd8d8ad441b06e0f494ff5237519c
+vendor/app/IWlanService/IWlanService.apk|cc19c2f66063f7c8807a03a8c20de85abe263cb6
 vendor/bin/cnd|07829b294562037b779a6e7244972d7c24e758a5
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
@@ -250,7 +263,7 @@ vendor/lib64/vendor.qti.latency@2.1.so|47f0d25338274af94764be9d39eabef8cf5ca790
 
 # Dolby - from Dolby Atmos Moto G52 Magisk Module
 odm/bin/hw/vendor.dolby_v3_6.hardware.dms360@2.0-service|da39a3ee5e6b4b0d3255bfef95601890afd80709
-system_ext/app/MotoSignatureApp/MotoSignatureApp.apk|98027bccd4ec14cb7887cde068e35f6b0ecd0a44
+system_ext/app/MotoSignatureApp/MotoSignatureApp.apk|685162a581ef41d54444c29362ec665a4e1eba80
 system_ext/etc/permissions/com.motorola.frameworks.core.addon.xml|b98f53235c8d4c1962d3b279840e2a074d0ddd10
 system_ext/etc/permissions/com.motorola.motosignature.xml|e94cdcfd1b92b6bd1d0b53c3c2ed8bffe362e6ac
 system_ext/etc/permissions/com.motorola.software.dolbyui.xml|d5c25b2522094346257a5ff0f4317c992b54d1fc
@@ -264,14 +277,14 @@ system_ext/etc/sysconfig/config-com.dolby.daxservice.xml|f2955d9e3d5f75b40fdc822
 system_ext/etc/sysconfig/config-com.motorola.android.providers.settings.xml|1f804d789dd7c8b7657a6f07e23bcac1ce5c701c
 system_ext/etc/sysconfig/config-com.motorola.dolby.dolbyui.xml|0131f1a5a5c2d2fc09a6bc75ff4e25b74785ec2a
 system_ext/etc/sysconfig/config-com.motorola.motosignature.app.xml|5b2c138d4be962f052700fb3ca00d822bbf836da
-system_ext/framework/com.motorola.frameworks.core.addon.jar|8431ff519b0a3e02411a0096898ee8acb372b9b7
-system_ext/framework/com.motorola.motosignature.jar|1607b24909a030ddec7f05b91356e6b2d76c0b6b
-system_ext/framework/moto-checkin.jar|989119b230c01ba95341d29de45e38120a68f394
-system_ext/framework/moto-settings.jar|0ebdf871ededa1eb9c5186bdb4a9055d89594779
-system_ext/framework/moto.jar|6c797a7f205f2ce5d939c000f21c6625daf0c33f
-system_ext/priv-app/MotoDolbyDax3/MotoDolbyDax3.apk;OVERRIDES=MusicFX|16a795a3ea09740d75740ec2b6ef45176e902c2b
-system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk|25deb5bdb18d55dee1b9bd1de2ba46e353c62780
-system_ext/priv-app/daxService/daxService.apk|c9f688a32c81aace7207bd67d14b926b2662ba98
+system_ext/framework/com.motorola.frameworks.core.addon.jar|1ecd773b904a955bac172b32db4e4141e0bd6a1f
+system_ext/framework/com.motorola.motosignature.jar|2107a208a83a1c87165ed75d3719e2925faa37db
+system_ext/framework/moto-checkin.jar|bcd6045d807fe25e570bfd35a5977bf75cee68a2
+system_ext/framework/moto-settings.jar|3d0b1a0ce1edaae4cf5e61f5bbab38cf3a5ed434
+system_ext/framework/moto.jar|aa5586761e334c32931e0a3dac5834b2003ee9c4
+system_ext/priv-app/MotoDolbyDax3/MotoDolbyDax3.apk;OVERRIDES=MusicFX|5024782edd22a48fbaba803add5753acc7b14b4d
+system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk|86388ca9b9a8f77c4a62839fcf4e355f80e7b157
+system_ext/priv-app/daxService/daxService.apk|8ed13897babe79b3ed2b6dc7ada9e5c2a132193a
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|8215768638794162db3bb76e43045926fcbb4b0b
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 vendor/lib/soundfx/libswdap.so|810d0e266e4a77f06cba72fe8bdde2e1ede4f9f9
@@ -336,32 +349,79 @@ vendor/lib64/libssd.so|6dcbfc531e69a3c7eeaf21e85ac0202b8fa82d55
 vendor/lib64/libops.so|3c763226ccc3b0f32e131af71a458b41bf2b3d8d
 vendor/lib64/libspl.so|f8bbe0322ce06a545f5dc79c888183ac61673b68
 
-# DRM (TUI) - from LA.UM.10.2.1.r1-03400-sdm660.0
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|3234100973fb8c34b0bb3b3b82db4aa038d1efcf
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|8837d8d38f9448c729a2e7ca196067d7c0e7ecd3
+# DRM (TUI) - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+system_ext/lib/vendor.qti.hardware.tui_comm@1.0.so|dc30ce560414117dc32ab331ff7737d21347005d
+system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so|b42fa9db67cf5050c3ae4e93ea3954ea2bff4bdb
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|cf3d3d18a169c2fdb601aece7d8ec09df0d88bf7
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|a6bd2ff94dd9a50ddb3fa5e24aa5df0d90b072ed
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|88a8ac5aa140029762836bd2bba0984ead548756
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|19599f6a2afd8a218a2a1d3bb214575db98e3c53
 
 # DRM (Widevine) - from Coral - Tiramisu/TPP1.220114.016/8158200
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|1ad2e046be16d2ee422925dba60b8ef4d9d10e43
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|225dd006bfecf6c1dca6793fa1c13a455ce4eae6
--vendor/etc/vintf/manifest/android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
-vendor/lib64/libwvhidl.so|aa31972bf48749785f3e5d91aaafac21f226ac87
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|40007c2086cb435d36b38de089cdfa4f38941b4e
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|e30c2941ce57abdb4def9abd6aceb83b21a3a97b
+-vendor/etc/vintf/manifest/android.hardware.drm@1.4-service.widevine.xml|f7bdeffa1778a8c452ee56113a352cffa651a9cd
+vendor/lib64/libwvhidl.so|8ffc9cfc0ca2abc0e7bbde94c61961b1fef45e6f
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8998.so
 
-# GPS
-vendor/bin/loc_launcher
-vendor/bin/lowi-server
-vendor/bin/xtra-daemon
-vendor/lib64/libdataitems.so
-vendor/lib64/libflp.so
-vendor/lib64/libgeofence.so
-vendor/lib64/libizat_core.so
-vendor/lib64/liblbs_core.so
-vendor/lib64/libloc_api_v02.so
-vendor/lib64/libloc_ds_api.so
+# GPS - from LA.UM.9.15.2.r1-07000-KAMORTA.QSSI-13.0
+vendor/bin/loc_launcher|f0b95b7d523d2785a3090c2598c4bbd6170f1ba1
+vendor/bin/lowi-server|d41d59d90c2fe03927ee561176103e71ec0d8376
+vendor/bin/mlid|b79458aed12d657c971144f183d81c217a481560
+vendor/bin/slim_daemon|ca793600e5f73be75ed70022f4bc7d0c4ba491d3
+vendor/bin/xtra-daemon|5fedb4bf4d5218dc79029fc7938d6354951fdd71
+vendor/bin/xtwifi-client|8dfc524b4ad75b8faea9e6540da95d162d69a440
+vendor/bin/xtwifi-inet-agent|4aabf2e71422b105a76a3064175b2399cb89fc4e
+vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
+vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
+vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|7fe9508093db72e9daa26e965e2744e277b7db0a
+vendor/lib64/libasn1cper.so|15236de74b03454838cb69fb5817c04dd9984efa
+vendor/lib64/libasn1crt.so|6780d64f14411f0bb1e7cc4568651bfd7ea3badf
+vendor/lib64/libasn1crtx.so|a356949a94f173356bfec186b2f4f0bc38a1eb04
+vendor/lib64/libcdfw.so|76aa65aea92ef92e0c4e4a6700c049d5de549c18
+vendor/lib64/libcdfw_remote_api.so|e43217af385097ea8d939a7c0cc60c3e092ad086
+vendor/lib64/libdataitems.so|8ac67639010304b249ef9fc08d12bedab4dd4d7c
+vendor/lib64/libgdtap.so|500675e4bee26627cda1f1cc87b8a6838f65b7a7
+vendor/lib64/libgnsspps.so|fe828f1be73b674601f2be29c41aca0de32c0dea
+vendor/lib64/libizat_client_api.so|4a982ffe253557b58934df0e9278f97fef5862f2
+vendor/lib64/libizat_core.so|31c154a6bc7c447670fca73ad87f4cd814d542c4
+vendor/lib64/liblbs_core.so|5e37b43162981f19e842838be4a730ac254dbb7a
+vendor/lib64/libloc_api_v02.so|bb3851d3aaf0eee89815d0160a91d1b14189fc9a
+vendor/lib64/libloc_api_wds.so|0f506584fe78cc1be3cf0f022b4314d2575796b1
+vendor/lib64/libloc_socket.so|d5ce9f5403a34fb826b86fe68e9b07f64bfabcab
+vendor/lib64/liblocationservice.so|38ae18992a9198faf7a110d644a38f12b7f4ca17
+vendor/lib64/liblocationservice_glue.so|5087838ca49c474063785ad361d35f2cead2c873
+vendor/lib64/liblowi_client.so|cfb59ada90506bf10e7633d73c16bf918e1ae356
+vendor/lib64/liblowi_wifihal.so|7e12b4c9380f9f487b2a5796ff204ce350df3930
+vendor/lib64/libminksocket.so|6629b78ab61916acd6e8f879cc0e2b246ec00ef9
+vendor/lib64/libqcc_file_agent.so|0345fc438536bc11f3e65999e0b750efb19ba9f9
+vendor/lib64/libslimclient.so|60252c9982551dd766cbbff247dc82767f63a4c8
+vendor/lib64/libxtadapter.so|b46b0ad003e9738e7ee9d6e51722f63505c47323
+vendor/lib64/libxtwifi_server_protocol.so|c26327db373c9df8e19c548f9f7d87789654f874
+vendor/lib64/libxtwifi_server_protocol_uri_v3.so|7fdac704f7c923b09dd3b658e6699c4ef2452cb8
+vendor/lib64/vendor.qti.gnss@1.0.so|50f716e9e4295a18b93fc674f2b6c132053a8246
+vendor/lib64/vendor.qti.gnss@1.1.so|3b771c3bb5221fb1b27fcbb355c339e582771616
+vendor/lib64/vendor.qti.gnss@1.2.so|a470538976d60f81dbae201734ffd96dd3bcf037
+vendor/lib64/vendor.qti.gnss@2.0.so|bdd134a8496c2b62e3ef69e66c8e698537280345
+vendor/lib64/vendor.qti.gnss@2.1.so|eaeec862a315de1729b7497dacd2441fe781b9e7
+vendor/lib64/vendor.qti.gnss@3.0.so|1c4e2b5e81031140ab1230e5fc00b35c1f085834
+vendor/lib64/vendor.qti.gnss@4.0-service.so|6d006555dce2da619f394b42e24104d76f79f36e
+vendor/lib64/vendor.qti.gnss@4.0.so|8ae256c3a5f69914a5aab20e4cbaba3be54c7f15
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|8f1bd782c728fc275b8e78785a4866414d8c1cd8
+
+# GPS - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service|450cfd49e4020f4b0c44ba24653bba5bc35a489e
+vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc|afeb332a4750a11587658fcc9a75a27f63bbccdd
+vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so|f8634578ec7dbe08b85f346a4a01b9d35b30029f
+vendor/lib64/libjnihelper.so|1d6fb56b3879aed18be3776784772b02b9879912
+vendor/lib64/libqdma_file_agent.so|209c1c33e273761ea1e8feae425dd0256f0dd489
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|e57659e5a635c367739cf2ed1902f3d40dd5e277
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|984490290e45332ff6e33562315a914d13c1e540
+
+# GPS - from psyche V14.0.9.0.TLDCNXM
+vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 
 # Graphics
 vendor/lib/egl/eglSubDriverAndroid.so
@@ -488,14 +548,6 @@ vendor/bin/pm-proxy|42383b9163716d8e6d81f0516e9cf09f22ea8b06
 vendor/bin/pm-service|b0a5d3491615ef9a237d93a393082105e3c0097c
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
-# Power-off alarm - from caymanslm - SKQ1.211103.001
-product/app/PowerOffAlarm/PowerOffAlarm.apk:system_ext/app/PowerOffAlarm/PowerOffAlarm.apk|f0a86fc11b38c059912303857bc4c79155430bcc
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|37b4999095331f4f3dd6c118ee0bdea4bdf7f003
-vendor/bin/power_off_alarm|04e651db91ca2598f1bf50453fdb49a63463b2dc
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|f2b57130987c65a1dc596bf83a2b09e086df9286
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|74675e4f720d75db031a0db4ca21463ebd331f34
-
 # QMI - from sld_sprout RKQ1.210607.001-00WW_3_490
 etc/permissions/qti_libpermissions.xml:system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 etc/permissions/qti_permissions.xml:system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
@@ -510,7 +562,6 @@ vendor/lib/libdiag.so|0fa4e975eca5a4ae62a8317e109557938453615e
 vendor/lib/libdsutils.so|1336d98d5f7549d93678fd4791cce39766114da0
 vendor/lib/libidl.so|fe761ab5f75a3a99368b0e6790dfa9effde841c2
 vendor/lib/libmdmdetect.so|c1712f7d094e7f5848cd4377e3075fdd758af312
-vendor/lib/libminksocket.so|d8904b322c59810b44ea533fbed46d58dbe7872b
 vendor/lib/libqdi.so|a9207294f63b73c1404f28c24d497167740197a5
 vendor/lib/libqdp.so|bf5457a4ea6fb0f9b15efe38cd8e98c4e28d0e1b
 vendor/lib/libqmi.so|116312adb99c357d1c2bab2aa2a8b68d49d590ef
@@ -526,7 +577,6 @@ vendor/lib64/libdiag.so|7afccc79d88106a624449a757b298653e55c2172
 vendor/lib64/libdsutils.so|17f87e351aa34cea83ca815875e4b459197066a3
 vendor/lib64/libidl.so|857f7a75a51ade7d3621f7fa6da0e9461244ca01
 vendor/lib64/libmdmdetect.so|4dee2a700aad658f3f30a6da069c867307ed371c
-vendor/lib64/libminksocket.so|95b69993dd6cc1700a9e1feb09cadc0997342d89
 vendor/lib64/libqdi.so|a226749d8277cae116d0db57b03305b14836ccab
 vendor/lib64/libqdp.so|aa245c0bf24983168ccf1da4a66008c214880eb1
 vendor/lib64/libqmi.so|221c5efee5f7a1fde06b31c80390af344b026378
@@ -546,12 +596,12 @@ vendor/lib/libqrtr.so|69c36527f12187cf6c0111124935f0b60a9d1145
 vendor/lib64/libqrtr.so|c7ca700c1f4759aa673a6c5478ca492487bbea70
 
 # Radio - from sld_sprout RKQ1.210607.001-00WW_3_490
-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|692d3d439cdee075729799e571113f6f8fe3e786
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|9b519ea7357ddd3d09b8f201252a8d3bd16acd5d
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/telephonyservice.xml|b7831598d3c19c6ce4ef431d1cc44d94c3c35a8d
 system_ext/framework/qcrilhook.jar|f2888f922b8347417dfa86741feb8348795fce6f
 system_ext/framework/qti-telephony-common.jar|0db037785928aae043e9be7f49bddbefad43fbc3
-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|26b725924d62c7fbd0ed72fe1f0786b18b2f8f36
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|54c44f24b47206e4897c7a22f81e40e4ea1da592
 vendor/bin/hw/qcrild|77d0168fbad7db01eec8abd9df25f19c05411eb4
 vendor/bin/ATFWD-daemon|e1d493d251232dc7787e8f9fe76c027830c63855
 vendor/bin/adpl|6bbc42cea3f882498e9bae6563659dc6538340e7
@@ -623,8 +673,8 @@ vendor/radio/qcril_database/qcril.db|86286c24a227cb968dac1f7ccfe0ad26fe4fd462
 system_ext/app/datastatusnotification/datastatusnotification.apk|abe3343065ffcfe3c315258831d073c6086139ae
 
 # Radio - IMS - from sld_sprout RKQ1.210607.001-00WW_3_490
-system_ext/app/imssettings/imssettings.apk|516d8be0f869e1733d0287722897420c57c73be5
-system_ext/app/uceShimService/uceShimService.apk|cdffe76fca53131f68eb996005a35304b924206e
+system_ext/app/imssettings/imssettings.apk|edcf9bb934e103834c4796f0e8257bc0f08a34dd
+system_ext/app/uceShimService/uceShimService.apk|76eee011c6cf2d61c9bf5a334dc89c3373382ab4
 system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so|edf4941798ce879de80112d3453dba5b541dd9dd
 system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so|2359b4a42b9f009cc574b1b149040fd7751d3bab
 system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so|e10101f34b09634689aaba2f58521af2e5c8690f
@@ -638,7 +688,7 @@ system_ext/lib64/lib-imsvt.so|4f96cc5f27551d0b6cb11ad6447d9ce8829dde47
 system_ext/lib64/lib-imsvtextutils.so|336c0ffed49a0a4605f41b488771ee0217fa80f0
 system_ext/lib64/libimsmedia_jni.so|f8be2575f8eaef8bb89a4bc049381ebffe857831
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
-system_ext/priv-app/ims/ims.apk|bed959752f39386d6a7045f8cf96226a14e31dfd
+system_ext/priv-app/ims/ims.apk|c166b3ae80438f2098a0aa7b1acdae915fec0382
 vendor/bin/ims_rtp_daemon|ed5c13c758080d79a9371061d53127d406475614
 vendor/bin/imsdatadaemon|701f9a2eaa2674bcaa7e69817bdcb656e99fcac9
 vendor/bin/imsqmidaemon|5fde955e71392479b2f3e6aaf6005fa54b618678
@@ -722,12 +772,12 @@ vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services - from LA.UM.10.2.1.r1-03400-sdm660.0
--vendor/app/TimeService/TimeService.apk|b3e694ecbf8eccf3b503b2adfc1133f13fa0c176
-vendor/bin/time_daemon|6dca9af6adbe563783ff8d93f165f7e8ab92828c
-vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
--vendor/lib/libtime_genoff.so|620254812afea89bf555e5b6bb2fad7730fb91e0
--vendor/lib64/libtime_genoff.so|d36b80620351c55e29665204d9b8b747530019f1
+# Time services - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+-vendor/app/TimeService/TimeService.apk|4b18d352dddd78e8591043cf44e73d69d1948d33
+-vendor/lib/libtime_genoff.so|61f2498b119a9991f86e350c7ed8fe1d2ffbab20
+-vendor/lib64/libtime_genoff.so|118c31a2a35bd82b8d392bc09d6eb37448389437
+vendor/bin/time_daemon|35147f3f1a63f45d4449b28177ac3495d375b4fc
+vendor/etc/init/init.time_daemon.rc|3f9e4f94dd88419b125d8702b7918ce0a75753ed
 
 # Wi-Fi
 vendor/bin/cnss-daemon

@@ -1,4 +1,4 @@
-/* Copyright (c) 2015-2017, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2015-2020, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -38,7 +38,7 @@ namespace loc_core
 {
 template <typename CINT, typename COUT>
 COUT SystemStatusOsObserver::containerTransfer(CINT& inContainer) {
-    COUT outContainer(0);
+    COUT outContainer = {};
     for (auto item : inContainer) {
         outContainer.insert(outContainer.begin(), item);
     }
@@ -46,9 +46,6 @@ COUT SystemStatusOsObserver::containerTransfer(CINT& inContainer) {
 }
 
 SystemStatusOsObserver::~SystemStatusOsObserver() {
-    // Close data-item library handle
-    DataItemsFactoryProxy::closeDataItemLibraryHandle();
-
     // Destroy cache
     for (auto each : mDataItemCache) {
         if (nullptr != each.second) {
@@ -67,6 +64,7 @@ void SystemStatusOsObserver::setSubscriptionObj(IDataItemSubscription* subscript
         inline SetSubsObj(ObserverContext& context, IDataItemSubscription* subscriptionObj) :
                 mContext(context), mSubsObj(subscriptionObj) {}
         void proc() const {
+            LOC_LOGi("SetSubsObj::enter");
             mContext.mSubscriptionObj = mSubsObj;
 
             if (!mContext.mSSObserver->mDataItemToClients.empty()) {
@@ -76,6 +74,7 @@ void SystemStatusOsObserver::setSubscriptionObj(IDataItemSubscription* subscript
                 mContext.mSubscriptionObj->subscribe(dis, mContext.mSSObserver);
                 mContext.mSubscriptionObj->requestData(dis, mContext.mSSObserver);
             }
+            LOC_LOGi("SetSubsObj::exit");
         }
     };
 
@@ -97,26 +96,24 @@ void SystemStatusOsObserver::subscribe(const list<DataItemId>& l, IDataItemObser
                 list<DataItemId>& l, IDataItemObserver* client, bool requestData) :
                 mParent(parent), mClient(client),
                 mDataItemSet(containerTransfer<list<DataItemId>, unordered_set<DataItemId>>(l)),
+                diItemlist(l),
                 mToRequestData(requestData) {}
 
         void proc() const {
-            unordered_set<DataItemId> dataItemsToSubscribe(0);
+            unordered_set<DataItemId> dataItemsToSubscribe = {};
             mParent->mDataItemToClients.add(mDataItemSet, {mClient}, &dataItemsToSubscribe);
             mParent->mClientToDataItems.add(mClient, mDataItemSet);
 
             mParent->sendCachedDataItems(mDataItemSet, mClient);
 
             // Send subscription set to framework
-            if (nullptr != mParent->mContext.mSubscriptionObj && !dataItemsToSubscribe.empty()) {
-                LOC_LOGD("Subscribe Request sent to framework for the following");
-                mParent->logMe(dataItemsToSubscribe);
-
+            if (nullptr != mParent->mContext.mSubscriptionObj) {
                 if (mToRequestData) {
-                    mParent->mContext.mSubscriptionObj->requestData(
-                            containerTransfer<unordered_set<DataItemId>, list<DataItemId>>(
-                                    std::move(dataItemsToSubscribe)),
-                            mParent);
-                } else {
+                    LOC_LOGd("Request Data sent to framework for the following");
+                    mParent->mContext.mSubscriptionObj->requestData(diItemlist, mParent);
+                } else if (!dataItemsToSubscribe.empty()) {
+                    LOC_LOGd("Subscribe Request sent to framework for the following");
+                    mParent->logMe(dataItemsToSubscribe);
                     mParent->mContext.mSubscriptionObj->subscribe(
                             containerTransfer<unordered_set<DataItemId>, list<DataItemId>>(
                                     std::move(dataItemsToSubscribe)),
@@ -127,6 +124,7 @@ void SystemStatusOsObserver::subscribe(const list<DataItemId>& l, IDataItemObser
         mutable SystemStatusOsObserver* mParent;
         IDataItemObserver* mClient;
         const unordered_set<DataItemId> mDataItemSet;
+        const list<DataItemId> diItemlist;
         bool mToRequestData;
     };
 
@@ -148,8 +146,8 @@ void SystemStatusOsObserver::updateSubscription(
                 mDataItemSet(containerTransfer<list<DataItemId>, unordered_set<DataItemId>>(l)) {}
 
         void proc() const {
-            unordered_set<DataItemId> dataItemsToSubscribe(0);
-            unordered_set<DataItemId> dataItemsToUnsubscribe(0);
+            unordered_set<DataItemId> dataItemsToSubscribe = {};
+            unordered_set<DataItemId> dataItemsToUnsubscribe = {};
             unordered_set<IDataItemObserver*> clients({mClient});
             // below removes clients from all entries keyed with the return of the
             // mClientToDataItems.update() call. If leaving an empty set of clients as the
@@ -176,7 +174,7 @@ void SystemStatusOsObserver::updateSubscription(
             if (nullptr != mParent->mContext.mSubscriptionObj) {
                 // Send subscription set to framework
                 if (!dataItemsToSubscribe.empty()) {
-                    LOC_LOGD("Subscribe Request sent to framework for the following");
+                    LOC_LOGd("Subscribe Request sent to framework for the following");
                     mParent->logMe(dataItemsToSubscribe);
 
                     mParent->mContext.mSubscriptionObj->subscribe(
@@ -187,7 +185,7 @@ void SystemStatusOsObserver::updateSubscription(
 
                 // Send unsubscribe to framework
                 if (!dataItemsToUnsubscribe.empty()) {
-                    LOC_LOGD("Unsubscribe Request sent to framework for the following");
+                    LOC_LOGd("Unsubscribe Request sent to framework for the following");
                     mParent->logMe(dataItemsToUnsubscribe);
 
                     mParent->mContext.mSubscriptionObj->unsubscribe(
@@ -220,16 +218,16 @@ void SystemStatusOsObserver::unsubscribe(
                 mDataItemSet(containerTransfer<list<DataItemId>, unordered_set<DataItemId>>(l)) {}
 
         void proc() const {
-            unordered_set<DataItemId> dataItemsUnusedByClient(0);
-            unordered_set<IDataItemObserver*> clientToRemove(0);
+            unordered_set<DataItemId> dataItemsUnusedByClient = {};
+            unordered_set<IDataItemObserver*> clientToRemove = {};
+            unordered_set<DataItemId> dataItemsToUnsubscribe = {};
             mParent->mClientToDataItems.trimOrRemove({mClient}, mDataItemSet,  &clientToRemove,
                                                      &dataItemsUnusedByClient);
-            unordered_set<DataItemId> dataItemsToUnsubscribe(0);
             mParent->mDataItemToClients.trimOrRemove(dataItemsUnusedByClient, {mClient},
                                                      &dataItemsToUnsubscribe, nullptr);
 
             if (nullptr != mParent->mContext.mSubscriptionObj && !dataItemsToUnsubscribe.empty()) {
-                LOC_LOGD("Unsubscribe Request sent to framework for the following data items");
+                LOC_LOGd("Unsubscribe Request sent to framework for the following data items");
                 mParent->logMe(dataItemsToUnsubscribe);
 
                 // Send unsubscribe to framework
@@ -260,6 +258,7 @@ void SystemStatusOsObserver::unsubscribeAll(IDataItemObserver* client)
 
         void proc() const {
             unordered_set<DataItemId> diByClient = mParent->mClientToDataItems.getValSet(mClient);
+
             if (!diByClient.empty()) {
                 unordered_set<DataItemId> dataItemsToUnsubscribe;
                 mParent->mClientToDataItems.remove(mClient);
@@ -269,7 +268,7 @@ void SystemStatusOsObserver::unsubscribeAll(IDataItemObserver* client)
                 if (!dataItemsToUnsubscribe.empty() &&
                     nullptr != mParent->mContext.mSubscriptionObj) {
 
-                    LOC_LOGD("Unsubscribe Request sent to framework for the following data items");
+                    LOC_LOGd("Unsubscribe Request sent to framework for the following data items");
                     mParent->logMe(dataItemsToUnsubscribe);
 
                     // Send unsubscribe to framework
@@ -309,7 +308,7 @@ void SystemStatusOsObserver::notify(const list<IDataItemCore*>& dlist)
         void proc() const {
             // Update Cache with received data items and prepare
             // list of data items to be sent.
-            unordered_set<DataItemId> dataItemIdsToBeSent(0);
+            unordered_set<DataItemId> dataItemIdsToBeSent = {};
             for (auto item : mDiVec) {
                 if (mParent->updateCache(item)) {
                     dataItemIdsToBeSent.insert(item->getId());
@@ -317,7 +316,7 @@ void SystemStatusOsObserver::notify(const list<IDataItemCore*>& dlist)
             }
 
             // Send data item to all subscribed clients
-            unordered_set<IDataItemObserver*> clientSet(0);
+            unordered_set<IDataItemObserver*> clientSet = {};
             for (auto each : dataItemIdsToBeSent) {
                 auto clients = mParent->mDataItemToClients.getValSetPtr(each);
                 if (nullptr != clients) {
@@ -345,26 +344,23 @@ void SystemStatusOsObserver::notify(const list<IDataItemCore*>& dlist)
     };
 
     if (!dlist.empty()) {
-        vector<IDataItemCore*> dataItemVec(dlist.size());
+        vector<IDataItemCore*> dataItemVec;
 
         for (auto each : dlist) {
-            IF_LOC_LOGD {
-                string dv;
-                each->stringify(dv);
-                LOC_LOGD("notify: DataItem In Value:%s", dv.c_str());
-            }
 
-            IDataItemCore* di = DataItemsFactoryProxy::createNewDataItem(each->getId());
+            IDataItemCore* di = DataItemsFactoryProxy::createNewDataItem(each);
             if (nullptr == di) {
                 LOC_LOGw("Unable to create dataitem:%d", each->getId());
                 continue;
             }
 
-            // Copy contents into the newly created data item
-            di->copy(each);
-
             // add this dataitem if updated from last one
             dataItemVec.push_back(di);
+            IF_LOC_LOGD {
+                string dv;
+                di->stringify(dv);
+                LOC_LOGd("notify: DataItem In Value:%s", dv.c_str());
+            }
         }
 
         if (!dataItemVec.empty()) {
@@ -379,7 +375,7 @@ void SystemStatusOsObserver::notify(const list<IDataItemCore*>& dlist)
 void SystemStatusOsObserver::turnOn(DataItemId dit, int timeOut)
 {
     if (nullptr == mContext.mFrameworkActionReqObj) {
-        LOC_LOGE("%s:%d]: Framework action request object is NULL", __func__, __LINE__);
+        LOC_LOGe("Framework action request object is NULL");
         return;
     }
 
@@ -390,7 +386,7 @@ void SystemStatusOsObserver::turnOn(DataItemId dit, int timeOut)
         // Add reference count as 1 and add dataitem to map
         pair<DataItemId, int> cpair(dit, 1);
         mActiveRequestCount.insert(cpair);
-        LOC_LOGD("Sending turnOn request");
+        LOC_LOGd("Sending turnOn request");
 
         // Send action turn on to framework
         struct HandleTurnOnMsg : public LocMsg {
@@ -405,19 +401,20 @@ void SystemStatusOsObserver::turnOn(DataItemId dit, int timeOut)
             DataItemId mDataItemId;
             int mTimeOut;
         };
-        mContext.mMsgTask->sendMsg(new (nothrow) HandleTurnOnMsg(this, dit, timeOut));
+        mContext.mMsgTask->sendMsg(
+                new (nothrow) HandleTurnOnMsg(mContext.mFrameworkActionReqObj, dit, timeOut));
     }
     else {
         // Found in map, update reference count
         citer->second++;
-        LOC_LOGD("turnOn - Data item:%d Num_refs:%d", dit, citer->second);
+        LOC_LOGd("turnOn - Data item:%d Num_refs:%d", dit, citer->second);
     }
 }
 
 void SystemStatusOsObserver::turnOff(DataItemId dit)
 {
     if (nullptr == mContext.mFrameworkActionReqObj) {
-        LOC_LOGE("%s:%d]: Framework action request object is NULL", __func__, __LINE__);
+        LOC_LOGe("Framework action request object is NULL");
         return;
     }
 
@@ -426,7 +423,7 @@ void SystemStatusOsObserver::turnOff(DataItemId dit)
     if (citer != mActiveRequestCount.end()) {
         // found
         citer->second--;
-        LOC_LOGD("turnOff - Data item:%d Remaining:%d", dit, citer->second);
+        LOC_LOGd("turnOff - Data item:%d Remaining:%d", dit, citer->second);
         if(citer->second == 0) {
             // if this was last reference, remove item from map and turn off module
             mActiveRequestCount.erase(citer);
@@ -449,59 +446,73 @@ void SystemStatusOsObserver::turnOff(DataItemId dit)
 }
 
 #ifdef USE_GLIB
-bool SystemStatusOsObserver::connectBackhaul()
+bool SystemStatusOsObserver::connectBackhaul(const string& clientName)
 {
     bool result = false;
 
     if (mContext.mFrameworkActionReqObj != NULL) {
         struct HandleConnectBackhaul : public LocMsg {
-            HandleConnectBackhaul(IFrameworkActionReq* fwkActReq) :
-                    mFwkActionReqObj(fwkActReq) {}
+            HandleConnectBackhaul(IFrameworkActionReq* fwkActReq, const string& clientName) :
+                    mClientName(clientName), mFwkActionReqObj(fwkActReq) {}
             virtual ~HandleConnectBackhaul() {}
             void proc() const {
-                LOC_LOGD("HandleConnectBackhaul");
-                mFwkActionReqObj->connectBackhaul();
+                LOC_LOGi("HandleConnectBackhaul::enter");
+                mFwkActionReqObj->connectBackhaul(mClientName);
+                LOC_LOGi("HandleConnectBackhaul::exit");
             }
             IFrameworkActionReq* mFwkActionReqObj;
+            string mClientName;
         };
         mContext.mMsgTask->sendMsg(
-                new (nothrow) HandleConnectBackhaul(mContext.mFrameworkActionReqObj));
+                new (nothrow) HandleConnectBackhaul(mContext.mFrameworkActionReqObj, clientName));
         result = true;
     }
     else {
-        ++mBackHaulConnectReqCount;
-        LOC_LOGE("Framework action request object is NULL.Caching connect request: %d",
-                        mBackHaulConnectReqCount);
+        LOC_LOGe("Framework action request object is NULL.Caching connect request: %s",
+                clientName.c_str());
+        ClientBackhaulReqCache::const_iterator iter = mBackHaulConnReqCache.find(clientName);
+        if (iter == mBackHaulConnReqCache.end()) {
+            // not found in set. first time receiving from request from client
+            LOC_LOGe("Adding client to BackHaulConnReqCache list");
+            mBackHaulConnReqCache.insert(clientName);
+        }
         result = false;
     }
     return result;
 
 }
 
-bool SystemStatusOsObserver::disconnectBackhaul()
+bool SystemStatusOsObserver::disconnectBackhaul(const string& clientName)
 {
     bool result = false;
 
     if (mContext.mFrameworkActionReqObj != NULL) {
         struct HandleDisconnectBackhaul : public LocMsg {
-            HandleDisconnectBackhaul(IFrameworkActionReq* fwkActReq) :
-                    mFwkActionReqObj(fwkActReq) {}
+            HandleDisconnectBackhaul(IFrameworkActionReq* fwkActReq, const string& clientName) :
+                    mClientName(clientName), mFwkActionReqObj(fwkActReq) {}
             virtual ~HandleDisconnectBackhaul() {}
             void proc() const {
-                LOC_LOGD("HandleDisconnectBackhaul");
-                mFwkActionReqObj->disconnectBackhaul();
+                LOC_LOGi("HandleDisconnectBackhaul::enter");
+                mFwkActionReqObj->disconnectBackhaul(mClientName);
+                LOC_LOGi("HandleDisconnectBackhaul::exit");
             }
             IFrameworkActionReq* mFwkActionReqObj;
+            string mClientName;
         };
         mContext.mMsgTask->sendMsg(
-                new (nothrow) HandleDisconnectBackhaul(mContext.mFrameworkActionReqObj));
+                new (nothrow) HandleDisconnectBackhaul(mContext.mFrameworkActionReqObj,
+                        clientName));
     }
     else {
-        if (mBackHaulConnectReqCount > 0) {
-            --mBackHaulConnectReqCount;
+        LOC_LOGe("Framework action request object is NULL.Caching disconnect request: %s",
+                clientName.c_str());
+        // Check if client has requested for backhaul connection.
+        ClientBackhaulReqCache::const_iterator iter = mBackHaulConnReqCache.find(clientName);
+        if (iter != mBackHaulConnReqCache.end()) {
+            // client found, remove from set.
+            LOC_LOGd("Removing client from BackHaulConnReqCache list");
+            mBackHaulConnReqCache.erase(iter);
         }
-        LOC_LOGE("Framework action request object is NULL.Caching disconnect request: %d",
-                        mBackHaulConnectReqCount);
         result = false;
     }
     return result;
@@ -518,14 +529,14 @@ void SystemStatusOsObserver::sendCachedDataItems(
     } else {
         string clientName;
         to->getName(clientName);
-        list<IDataItemCore*> dataItems(0);
+        list<IDataItemCore*> dataItems = {};
 
         for (auto each : s) {
             auto citer = mDataItemCache.find(each);
             if (citer != mDataItemCache.end()) {
                 string dv;
                 citer->second->stringify(dv);
-                LOC_LOGI("DataItem: %s >> %s", dv.c_str(), clientName.c_str());
+                LOC_LOGi("DataItem: %s >> %s", dv.c_str(), clientName.c_str());
                 dataItems.push_front(citer->second);
             }
         }
@@ -547,27 +558,22 @@ bool SystemStatusOsObserver::updateCache(IDataItemCore* d)
     // handling it, so SystemStatusOsObserver also doesn't.
     // So it has to be true to proceed.
     if (nullptr != d && mSystemStatus->eventDataItemNotify(d)) {
+        dataItemUpdated = true;
         auto citer = mDataItemCache.find(d->getId());
         if (citer == mDataItemCache.end()) {
             // New data item; not found in cache
-            IDataItemCore* dataitem = DataItemsFactoryProxy::createNewDataItem(d->getId());
+            IDataItemCore* dataitem = DataItemsFactoryProxy::createNewDataItem(d);
             if (nullptr != dataitem) {
-                // Copy the contents of the data item
-                dataitem->copy(d);
                 // Insert in mDataItemCache
                 mDataItemCache.insert(std::make_pair(d->getId(), dataitem));
-                dataItemUpdated = true;
             }
         } else {
             // Found in cache; Update cache if necessary
-            citer->second->copy(d, &dataItemUpdated);
-        }
-
-        if (dataItemUpdated) {
-            LOC_LOGV("DataItem:%d updated:%d", d->getId(), dataItemUpdated);
+            citer->second->copyFrom(d);
         }
     }
 
+    LOC_LOGd("DataItem:%d updated:%d", d->getId(), dataItemUpdated);
     return dataItemUpdated;
 }
 

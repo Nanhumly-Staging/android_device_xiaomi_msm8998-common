@@ -1,0 +1,5 @@
+GNSS_CFLAGS = [
+    "-Werror",
+    "-Wno-error=unused-parameter",
+    "-Wno-undefined-bool-conversion",
+]

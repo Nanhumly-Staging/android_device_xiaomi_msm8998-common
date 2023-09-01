@@ -14,6 +14,8 @@ persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.ras.enabled=false
+persist.vendor.audio.spatializer.speaker_enabled=true
+ro.audio.spatializer_enabled=true
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=11
 ro.vendor.audio.sdk.fluencetype=fluence
@@ -133,6 +135,9 @@ ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
 
 # FRP
 ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
+
+# GPS
+persist.backup.ntpServer=0.pool.ntp.org
 
 # Graphics
 ro.hardware.egl=adreno
