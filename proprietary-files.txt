@@ -773,12 +773,12 @@ vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
--vendor/app/TimeService/TimeService.apk|4b18d352dddd78e8591043cf44e73d69d1948d33
--vendor/lib/libtime_genoff.so|61f2498b119a9991f86e350c7ed8fe1d2ffbab20
--vendor/lib64/libtime_genoff.so|118c31a2a35bd82b8d392bc09d6eb37448389437
-vendor/bin/time_daemon|35147f3f1a63f45d4449b28177ac3495d375b4fc
+# Time services - from LA.UM.10.2.1.r1-03400-sdm660.0
+-vendor/app/TimeService/TimeService.apk|b3e694ecbf8eccf3b503b2adfc1133f13fa0c176
+vendor/bin/time_daemon|6dca9af6adbe563783ff8d93f165f7e8ab92828c
 vendor/etc/init/init.time_daemon.rc|3f9e4f94dd88419b125d8702b7918ce0a75753ed
+-vendor/lib/libtime_genoff.so|620254812afea89bf555e5b6bb2fad7730fb91e0
+-vendor/lib64/libtime_genoff.so|d36b80620351c55e29665204d9b8b747530019f1
 
 # Wi-Fi
 vendor/bin/cnss-daemon
