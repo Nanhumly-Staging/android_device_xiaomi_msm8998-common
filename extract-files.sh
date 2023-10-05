@@ -68,8 +68,15 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libminikin.so" "${2}"
             sed -i "s/service.bootanim.exit/service.bootanim.zzzz/g" "${2}"
             ;;
+        vendor/lib/lib_lowlight.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/lib_lowlight_dxo.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
         vendor/lib/libFaceGrade.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
         vendor/lib/libMiCameraHal.so)
             "${PATCHELF}" --remove-needed "libft2.so" "${2}"
@@ -80,8 +87,36 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "libcamera_shim.so" "${2}"
             grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
+        vendor/lib/libSonyIMX386PdafLibrary.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libXMFD_AgeGender.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
         vendor/lib/libarcsoft_beauty_shot.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libarcsoft_beautyshot.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libarcsoft_beautyshot_image_algorithm.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libarcsoft_beautyshot_video_algorithm.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libarcsoft_dualcam_optical_zoom.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libarcsoft_dualcam_optical_zoom_control.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libarcsoft_dualcam_refocus.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libmmcamera_hdr_gb_lib.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
         vendor/lib/libmmcamera2_sensor_modules.so)
             sed -i 's|/data/misc/camera/camera_lsc_caldata.txt|/data/vendor/camera/camera_lsc_calib.txt|g' "${2}"
@@ -90,8 +125,15 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             "${PATCHELF}" --remove-needed "libgui.so" "${2}"
             ;;
+        vendor/lib/libmorpho_easy_hdr.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libmorpho_hdr_checker.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
         vendor/lib/libmpbase.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
         vendor/lib64/libwvhidl.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
