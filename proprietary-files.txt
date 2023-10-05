@@ -362,7 +362,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|19599f6a2afd8a218a2a1d3bb214575
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine|40007c2086cb435d36b38de089cdfa4f38941b4e
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|e30c2941ce57abdb4def9abd6aceb83b21a3a97b
 -vendor/etc/vintf/manifest/android.hardware.drm@1.4-service.widevine.xml|f7bdeffa1778a8c452ee56113a352cffa651a9cd
-vendor/lib64/libwvhidl.so|8ffc9cfc0ca2abc0e7bbde94c61961b1fef45e6f
+vendor/lib64/libwvhidl.so|8ffc9cfc0ca2abc0e7bbde94c61961b1fef45e6f|49d15a003a14c78982e38802f6d4f6b58e07ee86
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8998.so
