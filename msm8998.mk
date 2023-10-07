@@ -446,7 +446,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.0.vendor \
-    android.hardware.wifi-service
+    android.hardware.wifi@1.0-service.legacy
 
 PRODUCT_PACKAGES += \
     wifi-mac-generator
