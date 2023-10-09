@@ -446,6 +446,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
+    libcld80211 \
     libwpa_client \
     hostapd \
     WifiOverlay \
