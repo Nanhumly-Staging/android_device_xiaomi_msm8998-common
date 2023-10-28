@@ -39,12 +39,6 @@ on init
     # Wait until TEE is ready
     wait_for_prop vendor.sys.listeners.registered true
 
-    # Boot-time fs tuning
-    write /sys/block/sda/queue/iostats 0
-    write /sys/block/sda/queue/nr_requests 256
-    write /sys/block/sde/queue/iostats 0
-    write /sys/block/sde/queue/nr_requests 256
-
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
     # Disable UFS powersaving
@@ -180,12 +174,8 @@ on property:sys.boot_completed=1
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 1
 
     # Post-boot fs tuning
-    write /sys/block/sda/queue/iostats 1
-    write /sys/block/sda/queue/nr_requests 128
-    write /sys/block/sda/queue/read_ahead_kb 128
-    write /sys/block/sde/queue/iostats 1
-    write /sys/block/sde/queue/nr_requests 128
-    write /sys/block/sde/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sde/queue/iostats 0
 
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-3,6-7
