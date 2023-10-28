@@ -424,8 +424,6 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
 
 # Vibrator
-$(call soong_config_set, vibrator, vibratortargets, vibratoraidlV2target)
-
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
