@@ -426,6 +426,7 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor_32 \
+    libhidlbase-v32 \
     libstdc++_vendor
 
 # Trust HAL
