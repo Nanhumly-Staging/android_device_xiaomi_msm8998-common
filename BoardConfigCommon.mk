@@ -16,6 +16,7 @@
 
 PLATFORM_PATH := device/xiaomi/msm8998-common
 
+BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Architecture
