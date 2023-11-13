@@ -2,9 +2,6 @@
 # product props for MSM8998
 #
 
-# Charger
-ro.charger.enable_suspend=true
-
 # Chipset
 ro.soc.manufacturer=QTI
 ro.soc.model=MSM8998
