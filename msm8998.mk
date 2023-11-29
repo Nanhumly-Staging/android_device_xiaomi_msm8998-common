@@ -439,6 +439,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor_32 \
     libhidlbase-v32 \
+    libstagefright_foundation-v33 \
     libstdc++_vendor
 
 # Trust HAL
