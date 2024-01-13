@@ -388,15 +388,11 @@ vendor/lib/egl/libq3dtools_esx.so|e88e4771d28af7bd18468edff12d5b97eb402c36
 vendor/lib/libC2D2.so|89650828a7b03f30f6386a071574792357479907
 vendor/lib/libCB.so|377518d6e6aaf18b44d579fa65e2a9881aff1a15
 vendor/lib/libOpenCL.so|3f669614d18c9f83ab63d0cf5bd9a060b2274424
-vendor/lib/libRSDriver_adreno.so|4dd7f88a4bc43a9b508e2be8f8e90337aefd4622
 vendor/lib/libadreno_utils.so|f1b14c5e7447bf189b78b71595580ee72c24bbc0
-vendor/lib/libbccQTI.so|0be327b62b993d09953fc0758fbf19672d58d3ec
 vendor/lib/libc2d30_bltlib.so|39027d65a0cabaa845af395961d812f7c7b60fba
 vendor/lib/libgsl.so|2f9fd0b52b4b0e1f5603f19640a7ec056a88a4e1
 vendor/lib/libllvm-glnext.so|7e01db710486f3e519b139067b19e7cc6521a0a5
 vendor/lib/libllvm-qcom.so|6b4c24796559c5e19a0c977dbbb28d1af8c2d1a5
-vendor/lib/librs_adreno.so|58585a91f1a1f8113917ac9f309edb153a4eab71
-vendor/lib/librs_adreno_sha1.so|a5fbbbbb238ea7d8e6b26d1b1010a1f0f9bf99e3
 vendor/lib64/egl/eglSubDriverAndroid.so|c30b1cdb7ca709628e9b05b4b344714c432b9fd4
 vendor/lib64/egl/libEGL_adreno.so|b24f55fcdf5dacda367af8a501c86260740386ac
 vendor/lib64/egl/libGLESv1_CM_adreno.so|af0fb9a817de422b8cb5e7ee54f5028f9e874299
@@ -407,15 +403,11 @@ vendor/lib64/egl/libq3dtools_esx.so|20e518234ac7cdfbda5266c6d7d3379a6552da0f
 vendor/lib64/libC2D2.so|b44aea39f7156a15557b10e4268d77fa847fd521
 vendor/lib64/libCB.so|02cf70a47a8ee676cc823299479d74699e2756ee
 vendor/lib64/libOpenCL.so|378f2c8a0d96cf3cf4e568eef1d165c2e64e94bd
-vendor/lib64/libRSDriver_adreno.so|3741629f99e9aac1bc728b3f9ccbb12182969e8b
 vendor/lib64/libadreno_utils.so|7af87da27077d7ae4280ac75ae02edbdb0eeca8b
-vendor/lib64/libbccQTI.so|42fdea81ea505ccadbf6d24af7ba37cf83760391
 vendor/lib64/libc2d30_bltlib.so|493bd74bddc4b8696e95e25c6f3436d84c45cda2
 vendor/lib64/libgsl.so|c504be81b7249dfba46d9a8bed6577e8ff40a6e2
 vendor/lib64/libllvm-glnext.so|6010d85923c3facd34ffd6b77467523093cf9db9
 vendor/lib64/libllvm-qcom.so|30a86bf5de34379741516a8c7b556b656d855106
-vendor/lib64/librs_adreno.so|eef142a5fb67cb6c03a83142895e4260d14a2b20
-vendor/lib64/librs_adreno_sha1.so|04a8637b27601d1e8a21337856a320182e561023
 
 # Graphics (HDR) - from dumpling - QKQ1.191014.012
 vendor/lib64/libhdr_tm.so|ac4c943ba0c9793e53fc0b4eecf78ebb90eb28bf
