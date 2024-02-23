@@ -49,7 +49,7 @@ vendor/lib/libqtigef.so
 vendor/lib/soundfx/libspatialaudio.so|b26727b8887dad56f5e183f7145487c88bd2f065
 
 # Audio libraries (Dolby) - from sofiap_ao_eea-user-11-RPR31.Q4U-20-26-2-a10bb-release-keys
--system_ext/app/MotoDolbyV3/MotoDolbyV3.apk|f6c483f79d9b8713ff03f475dad7bcf2c3e63ba5
+-system_ext/app/MotoDolbyV3/MotoDolbyV3.apk;OVERRIDES=AudioFX,MusicFX|f6c483f79d9b8713ff03f475dad7bcf2c3e63ba5
 -system_ext/priv-app/daxService/daxService.apk|14c00b94bad99462135cfe8f3da1bc71d8f72518
 system_ext/etc/permissions/com.dolby.daxservice.xml|86d4a12d3049d9de41db123026404f0c0bc40581
 system_ext/etc/permissions/com.motorola.dolby.dolbyui.features.xml|7eafc481b604505f057931a6f83c507e357886b3
