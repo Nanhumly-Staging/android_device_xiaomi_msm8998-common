@@ -46,8 +46,8 @@ vendor/lib/libqtigef.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libdirac.so
 
-# Audio libraries - from google/cheetah/cheetah:13/TQ3A.230805.001/10316531:user/release-keys
-vendor/lib/soundfx/libspatialaudio.so|b26727b8887dad56f5e183f7145487c88bd2f065
+# Audio libraries - from husky-user 14 AP1A.240405.002 11480754 release-keys
+vendor/lib64/soundfx/libspatialaudio.so|7653a31d0d374800cb3c078b88e2937d3ef0bdb0
 
 # Audio libraries (Dolby) - from sofiap_ao_eea-user-11-RPR31.Q4U-20-26-2-a10bb-release-keys
 -system_ext/app/MotoDolbyV3/MotoDolbyV3.apk;OVERRIDES=AudioFX,MusicFX|f6c483f79d9b8713ff03f475dad7bcf2c3e63ba5
