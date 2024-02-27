@@ -60,6 +60,20 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        lib/libwfdcommonutils.so)
+            "${PATCHELF}" --add-needed "libwfdgui_shim.so" "${2}"
+            "${PATCHELF}" --add-needed "libwfdpiex_shim.so" "${2}"
+            ;;
+        lib/libwfdmmsrc.so)
+            "${PATCHELF}" --add-needed "libwfdgui_shim.so" "${2}"
+            "${PATCHELF}" --add-needed "libwfdui_shim.so" "${2}"
+            ;;
+        lib/libwfdnative.so)
+            "${PATCHELF}" --add-needed "libwfdinput_shim.so" "${2}"
+            ;;
+        lib64/libwfdnative.so)
+            "${PATCHELF}" --add-needed "libwfdinput_shim.so" "${2}"
+            ;;
         system_ext/etc/permissions/qti_libpermissions.xml)
             sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
             ;;

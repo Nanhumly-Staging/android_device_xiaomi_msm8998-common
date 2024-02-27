@@ -1,0 +1,12 @@
+//
+// Copyright (C) 2023 Alcatraz323 <alcatraz32323@gmail.com>
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libwfdgui_shim",
+    shared_libs: ["libgui", "libutils"],
+    srcs: ["SurfaceComposerClient.cpp"],
+    system_ext_specific: true,
+}

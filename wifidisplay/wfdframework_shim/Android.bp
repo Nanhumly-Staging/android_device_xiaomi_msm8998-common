@@ -1,0 +1,18 @@
+//
+// Copyright (C) 2023 Alcatraz323 <alcatraz32323@gmail.com>
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+java_library {
+    name: "wfdframework_shim",
+    installable: true,
+
+    srcs: [
+        "src/**/*.java",
+        "src/**/I*.aidl",
+        "src/**/*.logtags",
+    ],
+
+    platform_apis: true,
+}

@@ -168,7 +168,12 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8998 \
     memtrack.msm8998 \
     libdisplayconfig \
-    libqdMetaData.system
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
+    libdisplayconfig.system.qti \
+    libqdMetaData.system \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
@@ -246,6 +251,8 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0.vendor \
     android.hidl.memory@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
@@ -463,6 +470,24 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libaacwrapper \
+    libnl \
+    libstagefright_enc_common \
+    libwfdgui_shim \
+    libwfdpiex_shim \
+    libwfdinput_shim \
+    libwfdui_shim \
+    wfdframework_shim
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon \
+    wfdframework_shim
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wfd/config-wfd-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-wfd-system-ext.xml
 
 # Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
