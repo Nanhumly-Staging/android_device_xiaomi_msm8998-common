@@ -81,6 +81,10 @@ vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio_hal.period_size=192
 
+# Audio (Dolby)
+persist.vendor.audio_fx.current=dolby
+ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1
+
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
 bluetooth.hardware.power.operating_voltage_mv=3300
@@ -143,7 +147,7 @@ ro.hardware.vulkan=msm8998
 persist.dbg.volte_avail_ovr=1
 
 # Media
-debug.stagefright.omx_default_rank.sw-audio=1
+debug.stagefright.omx_default_rank.sw-audio=16
 debug.stagefright.omx_default_rank=0
 
 # Network manager

@@ -1,3 +1,6 @@
+# Dolby
+/vendor/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service      u:object_r:hal_dms_default_exec:s0
+
 # DRM
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine u:object_r:hal_drm_widevine_exec:s0
 

@@ -35,8 +35,6 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|6918a6a6d66509568ced685917c891038c
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|87dc1a131534659173e71e108e7a3ffe6325845f
 
 # Audio libraries
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libdirac.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -44,9 +42,28 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libqtigef.so
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libdirac.so
 
 # Audio libraries - from google/cheetah/cheetah:13/TQ3A.230805.001/10316531:user/release-keys
 vendor/lib/soundfx/libspatialaudio.so|b26727b8887dad56f5e183f7145487c88bd2f065
+
+# Audio libraries (Dolby) - from sofiap_ao_eea-user-11-RPR31.Q4U-20-26-2-a10bb-release-keys
+-system_ext/app/MotoDolbyV3/MotoDolbyV3.apk;OVERRIDES=AudioFX,MusicFX|f6c483f79d9b8713ff03f475dad7bcf2c3e63ba5
+system_ext/etc/permissions/com.dolby.daxservice.xml|86d4a12d3049d9de41db123026404f0c0bc40581
+system_ext/etc/permissions/com.motorola.dolby.dolbyui.features.xml|7eafc481b604505f057931a6f83c507e357886b3
+system_ext/etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml|ab4600814879c626a410e607107829faceec9d2c
+-system_ext/priv-app/daxService/daxService.apk|14c00b94bad99462135cfe8f3da1bc71d8f72518
+vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service|7207a97fd3f00c854be4e4ddee98c881c61c2266
+vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc|e91adb7565e4fa126880917ed4d8f9ba4f9391d9
+vendor/lib/libdapparamstorage.so|6fce779d3b4f21783d3d96e82f9b185107bbab38
+vendor/lib/libstagefrightdolby.so|130b9da07e3c4a4ec04142049246eba18f1c350f
+vendor/lib/soundfx/libswdap.so|0bd57dec350fb40ef3222723e59a7d5fe503ca7f
+vendor/lib/vendor.dolby.hardware.dms@1.0.so|c1d8cea6e281a2d5c497b24d55f5703f0bcc2860
+vendor/lib64/libdapparamstorage.so|c54376a54043115f11154b47b10f6156f904ed00
+vendor/lib64/libdlbdsservice.so|77e3a0d44ce95c7e5139badb94087ea58211b022|5d0629a479cef770a5816c3d7a3c3bafb6896b73
+vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so|7afb6907a83aa7c9faa7308ae5b39338eadac1c8
+vendor/lib64/vendor.dolby.hardware.dms@1.0.so|f3593ce869d036f98ddc7fc8223a8b55dcf0ca36
 
 # Bluetooth - from sld_sprout RKQ1.210607.001-00WW_3_490
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|07d96d0d3c4a500b14ea3c97e02b9eb5ee2bbc4d
@@ -205,6 +222,8 @@ vendor/bin/hvdcp_opti
 vendor/app/CneApp/CneApp.apk|fa57f899f8cdd8d8ad441b06e0f494ff5237519c
 vendor/app/IWlanService/IWlanService.apk|cc19c2f66063f7c8807a03a8c20de85abe263cb6
 vendor/bin/cnd|07829b294562037b779a6e7244972d7c24e758a5
+vendor/etc/cne/mwqem.conf|c51d3893b86ab89fae218f3a92c4f9c18ea401a8
+vendor/etc/cne/profileMwqem.xml|947917691684584b7e2ddf3588cd6f8e99f3804f
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
@@ -232,8 +251,6 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|9b123d81c9b8991499cda33b0706810e0c
 vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bccad7649
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
-vendor/etc/cne/mwqem.conf|c51d3893b86ab89fae218f3a92c4f9c18ea401a8
-vendor/etc/cne/profileMwqem.xml|947917691684584b7e2ddf3588cd6f8e99f3804f
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml|eb11e72a91439180816e9a1d912cbe42f9019f68
 vendor/etc/init/cnd.rc|3a5183df3479500fb729493bc56c71166fc10bce
 vendor/lib64/libcne.so|1e0ea712d0c62168e527780bc525be99cf24da64
@@ -539,7 +556,7 @@ vendor/lib64/libqmi_csi.so|7e19c2266b7f63f3f9e69c039b1446acd460231b
 vendor/lib64/libqmi_encdec.so|a18bb21e5b9b53e3dc8dc45f6e7e65e32a467607
 vendor/lib64/libqmiservices.so|52770edf3e35f5376f3d0a131636f3213c9e59fa
 
-# QRTR - from OnePlus5:10/QKQ1.191014.012
+# QRTR - from dumpling - QKQ1.191014.012
 vendor/bin/qrtr-cfg|a7f9d9bf5cbd2e61c5853b6b2777ec20336e9866
 vendor/bin/qrtr-lookup|fb6cffbb7390b1b7f0cefe6c49ea8530d548dcee
 vendor/bin/qrtr-ns|d43bfbc74ebc51b4ce88a628579325388710cd7b
@@ -553,9 +570,9 @@ system_ext/etc/permissions/telephonyservice.xml|b7831598d3c19c6ce4ef431d1cc44d94
 system_ext/framework/qcrilhook.jar|f2888f922b8347417dfa86741feb8348795fce6f
 system_ext/framework/qti-telephony-common.jar|0db037785928aae043e9be7f49bddbefad43fbc3
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|54c44f24b47206e4897c7a22f81e40e4ea1da592
-vendor/bin/hw/qcrild|77d0168fbad7db01eec8abd9df25f19c05411eb4
 vendor/bin/ATFWD-daemon|e1d493d251232dc7787e8f9fe76c027830c63855
 vendor/bin/adpl|6bbc42cea3f882498e9bae6563659dc6538340e7
+vendor/bin/hw/qcrild|77d0168fbad7db01eec8abd9df25f19c05411eb4
 vendor/bin/netmgrd|a7e71e2b2fa5d26d5c34f3f51492f2d792dd1388
 vendor/bin/port-bridge|9312db5658f45206df6d51e78469d2d6a2d72b46
 vendor/bin/qti|b359b2cbd9d8cd832f020a43d9a930c1e4b13c9c
@@ -611,6 +628,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|5ec80005a20a2ef6
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so|663b65448ec8f5972337e1bbdc08ef5d4b08e8fa
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so|3ffb7301b6c185b114157c5423de604e5ba93ade
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|75a58827c0b4e06e2ca8163b6a904dab2af3be6a
+vendor/radio/qcril_database/qcril.db|86286c24a227cb968dac1f7ccfe0ad26fe4fd462
 vendor/radio/qcril_database/upgrade/0_initial.sql|3358b6f48cbdaade8995987540f21ffdaa5faeb0
 vendor/radio/qcril_database/upgrade/1_version_intro.sql|67b96cb3e94737bfe271b2519b9eb5fae17373a2
 vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql|b4a825ba20fea3e2f20c7f02c8bd64596c24a75e
@@ -618,7 +636,6 @@ vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql|0571aacaf9fc
 vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql|7e7ba312b5b1707165d219502dc4724eb94a0095
 vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql|fcb2cba3bfd718ecdc8d3cfac3a0b2b2c7e8c506
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|0fdf4b6ccb48906b37885e060429f79c9fd6bdbf
-vendor/radio/qcril_database/qcril.db|86286c24a227cb968dac1f7ccfe0ad26fe4fd462
 
 # Radio - IMS - from sld_sprout RKQ1.210607.001-00WW_3_490
 system_ext/app/imssettings/imssettings.apk|edcf9bb934e103834c4796f0e8257bc0f08a34dd
@@ -708,10 +725,12 @@ vendor/lib64/sensors.ssc.so
 
 # Soter
 app/SoterService/SoterService.apk
-lib64/vendor.qti.hardware.soter@1.0.so:vendor/lib64/vendor.qti.hardware.soter@1.0.so
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
+
+# Soter - from jasmine V11.0.28.0.QDIMIXM
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|4f7e3c8a6cde9efefd8b9bf440fb1ed442e21fd3
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|9cf774301dfb59173cc2a6871ff851ea6b546f39
+vendor/lib64/vendor.qti.hardware.soter@1.0.so|5815859dc07d3181901596d06612b379e86fe6fd
 
 # Thermal
 vendor/bin/thermal-engine
