@@ -22,6 +22,9 @@
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd@1.1                       u:object_r:hal_mlipay_default_exec:s0
 
+# RIL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.radio\.config@1\.1-service\.wrapper\.xiaomi_msm8998 u:object_r:hal_radio_config_default_exec:s0
+
 # Root extra symlink
 /persist                                                      u:object_r:mnt_vendor_file:s0
 

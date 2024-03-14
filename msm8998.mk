@@ -396,6 +396,12 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     librmnetctl
 
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.1-service.wrapper.xiaomi_msm8998 \
+    android.hardware.radio.c_shim@1.0.so \
+    android.hardware.radio.c_shim@1.1.so \
+    android.hardware.radio.c_shim@1.2.so
+
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy

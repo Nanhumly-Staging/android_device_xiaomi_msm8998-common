@@ -260,6 +260,9 @@ service qcom-c_main-sh /vendor/bin/init.class_main.sh
 on property:vold.decrypt=trigger_restart_framework
     start qcom-c_main-sh
 
+on property:init.svc.vendor.qcrild=running
+    restart vendor.radio-config-hal-1-1.wrapper
+
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class core
     user root
