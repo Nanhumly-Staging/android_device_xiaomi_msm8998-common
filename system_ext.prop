@@ -11,6 +11,9 @@ persist.vendor.dpm.feature=11
 # DRM
 drm.service.enabled=true
 
+# GPS
+persist.backup.ntpServer=0.pool.ntp.org
+
 # Logs
 persist.log.tag.AnalyticsService=S
 persist.log.tag.KernelCpuUidActiveTimeReader=S
