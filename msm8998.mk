@@ -438,10 +438,6 @@ PRODUCT_PACKAGES += \
     libstagefright_foundation-v33 \
     libstdc++_vendor
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # Wifi
 PRODUCT_PACKAGES += \
     ipacm \
