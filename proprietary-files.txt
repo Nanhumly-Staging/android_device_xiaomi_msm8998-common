@@ -296,8 +296,8 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeb
 vendor/etc/cne/mwqem.conf|c51d3893b86ab89fae218f3a92c4f9c18ea401a8
 vendor/etc/cne/profileMwqem.xml|947917691684584b7e2ddf3588cd6f8e99f3804f
 
-# DPM - from sld_sprout RKQ1.210607.001-00WW_3_490
-system_ext/bin/dpmd|4662a11c5331919cc08d541a298444ffce18cc1b
+# DPM - from Fairphone/FP3/FP3:13/6.A.023.1/gms-497e9bef:user/release-keys
+system_ext/bin/dpmd|dc94ffe90c6658b0bc99c64f68517c4048d0321a
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
 system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
@@ -309,8 +309,8 @@ system_ext/lib64/libdpmctmgr.so|8a687fce30df9483a96065e6cc4154f03562dfa9
 system_ext/lib64/libdpmfdmgr.so|bf3666db17e77da3a303c10579baec0bd018089f
 system_ext/lib64/libdpmframework.so|235fbb48b47baebd48dbe56f72c77d97ca12c07c
 system_ext/lib64/libdpmtcm.so|dff3d3dbacd18ed55b5758a174f5016ef9e7a896
-system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|b404ff23a51f505ecf2a61a1b0f4e569eedcd3c9
-vendor/bin/dpmQmiMgr|3c553042d4257161adb75c0979c829b0cb050639
+-system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|10828ba0d987fa884ad0b4a87a46bf9f505535ea
+vendor/bin/dpmQmiMgr|61a421804559b0e461439c19088acc01b871982a
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
