@@ -99,9 +99,13 @@ function blob_fixup() {
         vendor/lib64/libdlbdsservice.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
+        vendor/lib64/libQmiservices.so)
+            sed -i 's|libqmiservices.so|libQmiservices.so|g' "${2}"
+            ;;
         vendor/lib64/libril-qc-hal-qmi.so)
             for v in 1.{0..2}; do
                 sed -i "s|android.hardware.radio.config@${v}.so|android.hardware.radio.c_shim@${v}.so|g" "${2}"
+                sed -i 's|libqmiservices.so|libQmiservices.so|g' "${2}"
             done
             ;;
         vendor/lib64/libwvhidl.so)
