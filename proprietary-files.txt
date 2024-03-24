@@ -336,13 +336,13 @@ vendor/lib64/libsecureui_svcsock.so|ba9f7aa7605e54110afea5d9921381f6e6d71a19
 vendor/lib64/libops.so|3c763226ccc3b0f32e131af71a458b41bf2b3d8d
 vendor/lib64/libspl.so|f8bbe0322ce06a545f5dc79c888183ac61673b68
 
-# DRM (TUI) - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
-system_ext/lib/vendor.qti.hardware.tui_comm@1.0.so|dc30ce560414117dc32ab331ff7737d21347005d
-system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so|b42fa9db67cf5050c3ae4e93ea3954ea2bff4bdb
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|cf3d3d18a169c2fdb601aece7d8ec09df0d88bf7
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|a6bd2ff94dd9a50ddb3fa5e24aa5df0d90b072ed
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|88a8ac5aa140029762836bd2bba0984ead548756
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|19599f6a2afd8a218a2a1d3bb214575db98e3c53
+# DRM (TUI) - from Fairphone/FP3/FP3:13/6.A.023.1/gms-497e9bef:user/release-keys
+system_ext/lib/vendor.qti.hardware.tui_comm@1.0.so|066cee9ea342a677e91e0c112c7989a1a3ff66f1
+system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so|9d36beb8fa964584aae64a109543a4997417d70a
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|ccdb6027a199d5549fc92de8ce2ddb006b4b486d
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|f6b0e0e951394b609f0cb5c19e83a37447d9d292
 
 # DRM (Widevine) - from Coral - Tiramisu/TPP1.220114.016/8158200
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine|40007c2086cb435d36b38de089cdfa4f38941b4e
