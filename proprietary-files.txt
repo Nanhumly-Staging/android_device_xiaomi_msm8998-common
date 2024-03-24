@@ -315,23 +315,22 @@ vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
-# DRM and SEE - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/bin/qseecomd|12fde638ad4528c06fe336342862fd0ffc033dd0
-vendor/lib/libQSEEComAPI.so|961b8c99bf5d2a53b607cebf399fbdafb48c9bc6
-vendor/lib64/libGPreqcancel.so|d851bcc3e1b982d8403dc86921c5dd9274f71dc5
-vendor/lib64/libGPreqcancel_svc.so|760427f2139aec09a74b50a80153e461fbc6b272
-vendor/lib64/libQSEEComAPI.so|17cf281138050f87e29b2b71e63d131249b10f6f
-vendor/lib64/libSecureUILib.so|e9dd8017f40691925c59a074705be7cf11130780
-vendor/lib64/libStDrvInt.so|7c921ee6db896233f9ea03f1fb3a9b7d9434e7dc
-vendor/lib64/libcpion.so|602ffa6e92be0f2a19c8de782e1601135c7dd2a8
-vendor/lib64/libdrmfs.so|1654e650448a464b9de765c9ce80ba5a29e8b9c1
-vendor/lib64/libdrmtime.so|b3f024dae4aaa62c4fc33965847d1627387c6b56
-vendor/lib64/libhdcpsrm.so|8822f0408bdcc11dfc661321bfd3c253f0306e0c
-vendor/lib64/libqisl.so|e9c402aed643ee094daaf495f1a3a1f29542d602
-vendor/lib64/librpmb.so|a5ee7dfbbae868a253d7413c866800ea1146d7c8
-vendor/lib64/libsecureui.so|eef8db680df8e9b47d4725433cd0d3886cc8aa25
-vendor/lib64/libsecureui_svcsock.so|2232f56927964f10d41868919d94711930d50ed0
-vendor/lib64/libssd.so|6dcbfc531e69a3c7eeaf21e85ac0202b8fa82d55
+# DRM and SEE - from Fairphone/FP3/FP3:13/6.A.023.1/gms-497e9bef:user/release-keys
+vendor/bin/qseecomd|5b40595c23a54d13fb611311a4ab9b22a9428e86
+vendor/lib/libQSEEComAPI.so|2ab0e804dfc482a60a8f02247a6adf2435a41e6d
+vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
+vendor/lib64/libGPreqcancel_svc.so|d539a9c7368973264e71700824b21ce8e5339441
+vendor/lib64/libQSEEComAPI.so|c94db2c194c9edebe5e6c40d63bec1589432d62e
+vendor/lib64/libSecureUILib.so|19e0cd0438cf94953722355357e1a42a3209216e
+vendor/lib64/libStDrvInt.so|1161fc5b029125b2ac87a27e88555c14725f182f
+vendor/lib64/libcpion.so|dbeb95d8792600f9113ba24dfea10a9534eeb5fb
+vendor/lib64/libdrmfs.so|95da701370dd40644baab29d60a6613888ce1ea0
+vendor/lib64/libdrmtime.so|ca5000d5e7f7c16f197fc669f7a5170023d2e4c9
+vendor/lib64/libhdcpsrm.so|5d52991a622e7c975707bc564fa6bad89803e79d
+vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
+vendor/lib64/librpmb.so|4ae66b5b5d27b0302bb1d0a5f2396958ed8209c9
+vendor/lib64/libsecureui.so|1cb5b3e219c31b6fe5e7ba5b27d434e045e085ed
+vendor/lib64/libsecureui_svcsock.so|ba9f7aa7605e54110afea5d9921381f6e6d71a19
 
 # DRM and SEE - from Coral - Tiramisu/TPP1.220114.016/8158200
 vendor/lib64/libops.so|3c763226ccc3b0f32e131af71a458b41bf2b3d8d
