@@ -21,15 +21,15 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
-# Alarm - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
--product/app/PowerOffAlarm/PowerOffAlarm.apk|3b28fc11b84dea890fc57c2d0d92e0b1ceb047f2
-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|53c8e43e6ab1db1c3824626b1503b92991c24e7e
-system_ext/lib64/vendor.qti.hardware.alarm@1.0.so|1dc1a86f4061cba58460422b0a63d24b87e23921
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|461a834ada2a9f9feb8421d1dba11f85842b9772
-vendor/bin/power_off_alarm|911a408ebcfe448f697225e4c39573704c41544f
+# Alarm - from Fairphone/FP3/FP3:13/6.A.023.1/gms-497e9bef:user/release-keys
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|c7a8a195c47e1a3386173106ff6e2a68403b2e14
+system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|6508f5708221399eb8bd9754dc49bad32a911e27
+system_ext/lib64/vendor.qti.hardware.alarm@1.0.so|abf6cf11e5f5f3b5a111350aae351df62532ed71
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|e8f29b90facd4d605dca41644f5a0dc77f6d2e9b
+vendor/bin/power_off_alarm|b41ffb912ae8db9c3abd7e3c94e9e77160cf7ff6
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|7de458829e1d4f5157b291dab5fdb25546df08fc
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|6918a6a6d66509568ced685917c891038cec3d13
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|fdc8542c93c3e0572a172040bb6bb741baba348e
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|f34f3f363932160ef659ec21543b0d33f0215dbc
 
 # ANT+ - from Fairphone/FP3/FP3:13/6.A.023.1/gms-497e9bef:user/release-keys
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so|2bad2579ce576c46af6a50ee6687bd92fa7f76cd
