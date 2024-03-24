@@ -60,9 +60,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        system_ext/etc/permissions/qti_libpermissions.xml)
-            sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
-            ;;
         vendor/lib/hw/camera.msm8998.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             "${PATCHELF}" --remove-needed "libminikin.so" "${2}"
