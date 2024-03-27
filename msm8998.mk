@@ -399,10 +399,10 @@ PRODUCT_PACKAGES += \
     librmnetctl
 
 PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.1-service.wrapper.xiaomi_msm8998 \
-    android.hardware.radio.c_shim@1.0.so \
-    android.hardware.radio.c_shim@1.1.so \
-    android.hardware.radio.c_shim@1.2.so
+    android.hardware.radio.c_shim@1.0 \
+    android.hardware.radio.c_shim@1.1 \
+    android.hardware.radio.c_shim@1.2 \
+    android.hardware.radio.config@1.1-service.wrapper
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
