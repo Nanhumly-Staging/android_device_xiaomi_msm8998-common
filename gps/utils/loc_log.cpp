@@ -33,7 +33,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/time.h>
-#include <time.h>
 #include "log_util.h"
 #include "loc_log.h"
 #include "msg_q.h"
@@ -221,7 +220,7 @@ RETURN VALUE
    N/A
 
 ===========================================================================*/
-void log_buffer_insert(char *str, unsigned long buf_size __unused, int level)
+void log_buffer_insert(char *str, unsigned long buf_size, int level)
 {
     timespec tv;
     clock_gettime(CLOCK_BOOTTIME, &tv);

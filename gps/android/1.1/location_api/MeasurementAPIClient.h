@@ -53,15 +53,12 @@ public:
     MeasurementAPIClient& operator=(const MeasurementAPIClient&) = delete;
 
     // for GpsMeasurementInterface
-    template <typename T>
-    Return<IGnssMeasurement::GnssMeasurementStatus> measurementSetCallback(
-            const sp<T>& callback, GnssPowerMode powerMode = GNSS_POWER_MODE_INVALID) {
-        mMutex.lock();
-        setCallbackLocked(callback);
-        mMutex.unlock();
-
-        return startTracking(powerMode);
-    }
+    Return<V1_0::IGnssMeasurement::GnssMeasurementStatus> measurementSetCallback(
+            const sp<V1_0::IGnssMeasurementCallback>& callback);
+    Return<V1_0::IGnssMeasurement::GnssMeasurementStatus> measurementSetCallback_1_1(
+            const sp<IGnssMeasurementCallback>& callback,
+            GnssPowerMode powerMode = GNSS_POWER_MODE_INVALID,
+            uint32_t timeBetweenMeasurement = GPS_DEFAULT_FIX_INTERVAL_MS);
     void measurementClose();
     Return<IGnssMeasurement::GnssMeasurementStatus> startTracking(
             GnssPowerMode powerMode = GNSS_POWER_MODE_INVALID,
@@ -71,12 +68,6 @@ public:
     void onGnssMeasurementsCb(GnssMeasurementsNotification gnssMeasurementsNotification) final;
 
 private:
-    inline void setCallbackLocked(const sp<V1_0::IGnssMeasurementCallback>& callback) {
-        mGnssMeasurementCbIface = callback;
-    }
-    inline void setCallbackLocked(const sp<V1_1::IGnssMeasurementCallback>& callback) {
-        mGnssMeasurementCbIface_1_1 = callback;
-    }
     virtual ~MeasurementAPIClient();
 
     std::mutex mMutex;

@@ -63,6 +63,19 @@ MeasurementAPIClient::~MeasurementAPIClient()
     LOC_LOGD("%s]: ()", __FUNCTION__);
 }
 
+// for GpsInterface
+Return<IGnssMeasurement::GnssMeasurementStatus>
+MeasurementAPIClient::measurementSetCallback(const sp<V1_0::IGnssMeasurementCallback>& callback)
+{
+    LOC_LOGD("%s]: (%p)", __FUNCTION__, &callback);
+
+    mMutex.lock();
+    mGnssMeasurementCbIface = callback;
+    mMutex.unlock();
+
+    return startTracking();
+}
+
 Return<IGnssMeasurement::GnssMeasurementStatus>
 MeasurementAPIClient::startTracking()
 {
@@ -70,6 +83,16 @@ MeasurementAPIClient::startTracking()
     memset(&locationCallbacks, 0, sizeof(LocationCallbacks));
     locationCallbacks.size = sizeof(LocationCallbacks);
 
+    locationCallbacks.trackingCb = nullptr;
+    locationCallbacks.batchingCb = nullptr;
+    locationCallbacks.geofenceBreachCb = nullptr;
+    locationCallbacks.geofenceStatusCb = nullptr;
+    locationCallbacks.gnssLocationInfoCb = nullptr;
+    locationCallbacks.gnssNiCb = nullptr;
+    locationCallbacks.gnssSvCb = nullptr;
+    locationCallbacks.gnssNmeaCb = nullptr;
+
+    locationCallbacks.gnssMeasurementsCb = nullptr;
     if (mGnssMeasurementCbIface != nullptr) {
         locationCallbacks.gnssMeasurementsCb =
             [this](GnssMeasurementsNotification gnssMeasurementsNotification) {
@@ -86,7 +109,7 @@ MeasurementAPIClient::startTracking()
     options.mode = GNSS_SUPL_MODE_STANDALONE;
 
     mTracking = true;
-    LOC_LOGd();
+    LOC_LOGD("%s]: start tracking session", __FUNCTION__);
     locAPIStartTracking(options);
     return IGnssMeasurement::GnssMeasurementStatus::SUCCESS;
 }
