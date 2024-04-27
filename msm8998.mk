@@ -207,36 +207,26 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
-    libbatching \
-    libgeofencing \
-    libgnss \
-    libsensorndkbridge \
-    libwifi-hal-ctrl
-
-PRODUCT_PACKAGES += \
-    gps.conf \
-    flp.conf \
-    gnss_antenna_info.conf \
     gnss@2.0-base.policy \
     gnss@2.0-xtra-daemon.policy \
     gnss@2.0-xtwifi-client.policy \
     gnss@2.0-xtwifi-inet-agent.policy \
-    libloc_pla_headers \
-    liblocation_api_headers \
-    libgps.utils_headers \
-    liblocation_api \
+    libbatching \
+    libgeofencing \
+    libgnss \
+    libgnsspps \
     libgps.utils \
-    libloc_core
+    liblocation_api \
+    libloc_core \
+    libsynergy_loc_api
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
-    $(LOCAL_PATH)/gps/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
-    $(LOCAL_PATH)/gps/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
-    $(LOCAL_PATH)/gps/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
-    $(LOCAL_PATH)/gps/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
+# GNSS configs
+PRODUCT_PACKAGES += \
+    flp.conf \
+    gnss_antenna_info.conf \
+    gps.conf
 
 # Health
 PRODUCT_PACKAGES += \

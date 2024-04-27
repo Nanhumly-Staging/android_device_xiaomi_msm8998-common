@@ -354,62 +354,48 @@ vendor/lib64/libwvhidl.so|8ffc9cfc0ca2abc0e7bbde94c61961b1fef45e6f|49d15a003a14c
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8998.so
 
-# GPS - from LA.UM.9.15.2.r1-07000-KAMORTA.QSSI-13.0
-vendor/bin/loc_launcher|f0b95b7d523d2785a3090c2598c4bbd6170f1ba1
-vendor/bin/lowi-server|d41d59d90c2fe03927ee561176103e71ec0d8376
-vendor/bin/mlid|b79458aed12d657c971144f183d81c217a481560
-vendor/bin/slim_daemon|ca793600e5f73be75ed70022f4bc7d0c4ba491d3
-vendor/bin/xtra-daemon|5fedb4bf4d5218dc79029fc7938d6354951fdd71
-vendor/bin/xtwifi-client|8dfc524b4ad75b8faea9e6540da95d162d69a440
-vendor/bin/xtwifi-inet-agent|4aabf2e71422b105a76a3064175b2399cb89fc4e
+# GNSS - from Fairphone/FP3/FP3:13/6.A.023.1/gms-497e9bef:user/release-keys
+vendor/bin/loc_launcher|923d85bd727fb809b43fa86adbf739dd2b55285c
+vendor/bin/lowi-server|5d18cc8854549c366f63cdce29178eb48c9b24b0
+vendor/bin/mlid|46ddb37a149cf09bff592437a41ff30e849c234e
+vendor/bin/xtra-daemon|0d15669c226784e4033ddee6cf396c39ff3d2bdf
+vendor/bin/xtwifi-client|7e5cb0670b20c12fbc5cbf4fb642efdd72e92f46
+vendor/bin/xtwifi-inet-agent|73eb9393ba634d805055eea3fbea64785063be4b
 vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
-vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
-vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|7fe9508093db72e9daa26e965e2744e277b7db0a
-vendor/lib64/libasn1cper.so|15236de74b03454838cb69fb5817c04dd9984efa
-vendor/lib64/libasn1crt.so|6780d64f14411f0bb1e7cc4568651bfd7ea3badf
-vendor/lib64/libasn1crtx.so|a356949a94f173356bfec186b2f4f0bc38a1eb04
-vendor/lib64/libcdfw.so|76aa65aea92ef92e0c4e4a6700c049d5de549c18
-vendor/lib64/libcdfw_remote_api.so|e43217af385097ea8d939a7c0cc60c3e092ad086
-vendor/lib64/libdataitems.so|8ac67639010304b249ef9fc08d12bedab4dd4d7c
-vendor/lib64/libgdtap.so|500675e4bee26627cda1f1cc87b8a6838f65b7a7
-vendor/lib64/libgnsspps.so|fe828f1be73b674601f2be29c41aca0de32c0dea
-vendor/lib64/libizat_client_api.so|4a982ffe253557b58934df0e9278f97fef5862f2
-vendor/lib64/libizat_core.so|31c154a6bc7c447670fca73ad87f4cd814d542c4
-vendor/lib64/liblbs_core.so|5e37b43162981f19e842838be4a730ac254dbb7a
-vendor/lib64/libloc_api_v02.so|bb3851d3aaf0eee89815d0160a91d1b14189fc9a
-vendor/lib64/libloc_api_wds.so|0f506584fe78cc1be3cf0f022b4314d2575796b1
-vendor/lib64/libloc_socket.so|d5ce9f5403a34fb826b86fe68e9b07f64bfabcab
-vendor/lib64/liblocationservice.so|38ae18992a9198faf7a110d644a38f12b7f4ca17
-vendor/lib64/liblocationservice_glue.so|5087838ca49c474063785ad361d35f2cead2c873
-vendor/lib64/liblowi_client.so|cfb59ada90506bf10e7633d73c16bf918e1ae356
-vendor/lib64/liblowi_wifihal.so|7e12b4c9380f9f487b2a5796ff204ce350df3930
-vendor/lib64/libminksocket.so|6629b78ab61916acd6e8f879cc0e2b246ec00ef9
-vendor/lib64/libqcc_file_agent.so|0345fc438536bc11f3e65999e0b750efb19ba9f9
-vendor/lib64/libslimclient.so|60252c9982551dd766cbbff247dc82767f63a4c8
-vendor/lib64/libxtadapter.so|b46b0ad003e9738e7ee9d6e51722f63505c47323
-vendor/lib64/libxtwifi_server_protocol.so|c26327db373c9df8e19c548f9f7d87789654f874
-vendor/lib64/libxtwifi_server_protocol_uri_v3.so|7fdac704f7c923b09dd3b658e6699c4ef2452cb8
-vendor/lib64/vendor.qti.gnss@1.0.so|50f716e9e4295a18b93fc674f2b6c132053a8246
-vendor/lib64/vendor.qti.gnss@1.1.so|3b771c3bb5221fb1b27fcbb355c339e582771616
-vendor/lib64/vendor.qti.gnss@1.2.so|a470538976d60f81dbae201734ffd96dd3bcf037
-vendor/lib64/vendor.qti.gnss@2.0.so|bdd134a8496c2b62e3ef69e66c8e698537280345
-vendor/lib64/vendor.qti.gnss@2.1.so|eaeec862a315de1729b7497dacd2441fe781b9e7
-vendor/lib64/vendor.qti.gnss@3.0.so|1c4e2b5e81031140ab1230e5fc00b35c1f085834
-vendor/lib64/vendor.qti.gnss@4.0-service.so|6d006555dce2da619f394b42e24104d76f79f36e
-vendor/lib64/vendor.qti.gnss@4.0.so|8ae256c3a5f69914a5aab20e4cbaba3be54c7f15
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|8f1bd782c728fc275b8e78785a4866414d8c1cd8
-
-# GPS - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
-vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service|450cfd49e4020f4b0c44ba24653bba5bc35a489e
-vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc|afeb332a4750a11587658fcc9a75a27f63bbccdd
-vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so|f8634578ec7dbe08b85f346a4a01b9d35b30029f
-vendor/lib64/libjnihelper.so|1d6fb56b3879aed18be3776784772b02b9879912
-vendor/lib64/libqdma_file_agent.so|209c1c33e273761ea1e8feae425dd0256f0dd489
-vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|e57659e5a635c367739cf2ed1902f3d40dd5e277
-vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|984490290e45332ff6e33562315a914d13c1e540
-
-# GPS - from psyche V14.0.9.0.TLDCNXM
+vendor/etc/izat.conf|2ac768473abee2bf6af0bbc59233d30562e9fb22
+vendor/etc/lowi.conf|2045e83483849a124e5fef052b59190f1b784df0
+vendor/etc/sap.conf|b5ea86d9d9ee36dc13194474d343dae36f6fa032
 vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
+vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
+vendor/etc/xtwifi.conf|ac2189707c0016c31846ccec73e8857d7f566605
+vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|3faeada4db08a081852d06bacda693ab2fb4678b
+vendor/lib64/libasn1cper.so|74d2219f2f41e3f302db9bbf89f9c798d6af90f2
+vendor/lib64/libasn1crt.so|6780d64f14411f0bb1e7cc4568651bfd7ea3badf
+vendor/lib64/libasn1crtx.so|684ad8097d744ae53c9632a053130dd4f1d69eb4
+vendor/lib64/libcdfw.so|543b8282f4b6719113f04e14dd908137521e2bb5
+vendor/lib64/libcdfw_remote_api.so|558636f4fa4c17f29cb644c8c6e07766b7240005
+vendor/lib64/libdataitems.so|392953954f2fb59ce4a2e8acc11c4188e418fee2
+vendor/lib64/libgdtap.so|b46b7f6caaf2c2d4f43ed263bcdff3edfdc9f0f1
+vendor/lib64/libizat_client_api.so|331cc111b7ca79f110147fb49e935fcd745b02e8
+vendor/lib64/libizat_core.so|dc3e14f4203d1146ea5fed09b47a2cbb70f12bdc
+vendor/lib64/liblbs_core.so|447d28e3b08355282b53c01b2431cdda3b480c40
+vendor/lib64/libloc_api_v02.so|b58a91ab6775bbffad7154fe5c3445d310a951ac
+vendor/lib64/libloc_socket.so|3aed3ebfa35ab1ed8a1ce6b63391000878e59372
+vendor/lib64/liblocationservice.so|caeb98959d02a3bd8fc90ede67139a3aafde90b3
+vendor/lib64/liblocationservice_glue.so|86bad6c355db3d89e24569bad4b7e2c04b89d778
+vendor/lib64/liblowi_client.so|f6f99b941b4e63799576ab0cebd237e917807881
+vendor/lib64/libminksocket.so|103f45603bef0d1fbf52ccdf8458dd31cabe3945
+vendor/lib64/libxtadapter.so|495af82c252ccca8257c5281ba699da214fd1539
+vendor/lib64/libxtwifi_server_protocol.so|c5b777d2f47976354951c9f2d8ee6fa5e82fe225
+vendor/lib64/libxtwifi_server_protocol_uri_v3.so|ae3a3bdcda27327409c5f93ffd47e5726b404b94
+vendor/lib64/vendor.qti.gnss@1.0.so|7b9184263c7494c91f5811f7de91eef365034cf6
+vendor/lib64/vendor.qti.gnss@1.1.so|4aff58f45ccd00aacce8480d8892a5941bf04a0f
+vendor/lib64/vendor.qti.gnss@1.2.so|7561202e43cddc8419465e6d33a4756111e6ce5c
+vendor/lib64/vendor.qti.gnss@2.0.so|2e425157e11738a9ae0c951f7e17f689f6afaa55
+vendor/lib64/vendor.qti.gnss@2.1.so|148c38d7bb7f604637ff38d25aed75f412ebea3e
+vendor/lib64/vendor.qti.gnss@3.0.so|511a8354bb199b1b4d0d264762bdc078fd9f3e6b
+vendor/lib64/vendor.qti.gnss@4.0-service.so|218e7e15a1d3b58bb8adb695e7b37036977c5573
+vendor/lib64/vendor.qti.gnss@4.0.so|7ba7853e772806f98fe60243542498a146dfe248
 
 # Graphics - from dumpling - QKQ1.191014.012
 vendor/lib/egl/eglSubDriverAndroid.so|9a22d4a4daeb772d2ec1671fce7fbd09523e3ec9
@@ -537,6 +523,16 @@ vendor/lib64/libqti-util.so
 vendor/bin/pm-proxy|42383b9163716d8e6d81f0516e9cf09f22ea8b06
 vendor/bin/pm-service|b0a5d3491615ef9a237d93a393082105e3c0097c
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
+
+# QCC - from Fairphone/FP3/FP3:13/6.A.023.1/gms-497e9bef:user/release-keys
+system_ext/lib64/libqcc.so|869b683bb19acff628571703d7531d7de40247d1
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0-halimpl.so|b139b448e1942905b029a80b9a6d4e98d1b9dd7d
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so|10076c4ace37de1a7d91ed5c8d665e739e02774c
+vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so|0b1e323871e2828b9e8970e42635e3f7999a17e4
+vendor/lib64/libqcc_file_agent.so|cd70ce305d5036a027060aa989b0dcbcfab8edb6
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|3ff445db2dd2db1a1068fe70a54a6c04fbdd3123
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|58dd8c5877ba3a274f43f63e6f033213dd84e1c4
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|01b1d11316f5dcd8c1012a55ff01399081c79940
 
 # QMI - from Fairphone/FP3/FP3:13/6.A.023.1/gms-497e9bef:user/release-keys
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
