@@ -60,6 +60,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/etc/izat.conf)
+            sed -i "216s/PROCESS_STATE=ENABLED/PROCESS_STATE=DISABLED/g" "${2}"
+            ;;
         vendor/lib/hw/camera.msm8998.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             "${PATCHELF}" --remove-needed "libminikin.so" "${2}"
