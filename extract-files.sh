@@ -110,6 +110,12 @@ function blob_fixup() {
         vendor/lib64/libwvhidl.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
             ;;
+        vendor/lib64/hw/keystore.msm8998.so)
+            sed -i "s|keystore.msm8953.so|keystore.msm8998.so|g" "${2}"
+            ;;
+        vendor/lib64/hw/gatekeeper.msm8998.so)
+            sed -i "s|gatekeeper.msm8953.so|gatekeeper.msm8998.so|g" "${2}"
+            ;;
     esac
 }
 
