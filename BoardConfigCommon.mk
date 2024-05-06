@@ -125,7 +125,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2019-09-01
+VENDOR_SECURITY_PATCH := 2023-12-05
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
