@@ -345,11 +345,13 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|ccdb6027a199d5549fc92de8ce2ddb006b4b486d
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|f6b0e0e951394b609f0cb5c19e83a37447d9d292
 
-# DRM (Widevine) - from Coral - Tiramisu/TPP1.220114.016/8158200
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|40007c2086cb435d36b38de089cdfa4f38941b4e
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|e30c2941ce57abdb4def9abd6aceb83b21a3a97b
--vendor/etc/vintf/manifest/android.hardware.drm@1.4-service.widevine.xml|f7bdeffa1778a8c452ee56113a352cffa651a9cd
-vendor/lib64/libwvhidl.so|8ffc9cfc0ca2abc0e7bbde94c61961b1fef45e6f|49d15a003a14c78982e38802f6d4f6b58e07ee86
+# DRM (Widevine) - from Fairphone/FP3/FP3:13/6.A.028.1/gms-fb581341:user/release-keys
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine|ba2ece25131db91901f3adc9b928edb08c181bf9
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c1b1429e90b04ff96ebf60
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+vendor/lib/libwvhidl.so|5e4b244a261b811823d66eeeb6cb102700f351e2
+vendor/lib/libwvhidl@1.3.so|0b0205ba44abdf8f24e28d9a46e2fdeaddbc7fb1
+vendor/lib64/libwvhidl.so|f16af38ac55b6df46614df0698ead5a4d2230d65
 
 # Gatekeeper - from Fairphone/FP3/FP3:13/6.A.028.1/gms-fb581341:user/release-keys
 vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8998.so|d760257a98254b9e87ae258e267b1a45a0ed7ecb|58063798ec6d09925915f45f08985def09e08121
