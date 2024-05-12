@@ -150,6 +150,7 @@ debug.stagefright.omx_default_rank=0
 
 # Network manager
 persist.vendor.data.iwlan.enable=true
+persist.vendor.data.mode=concurrent
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
