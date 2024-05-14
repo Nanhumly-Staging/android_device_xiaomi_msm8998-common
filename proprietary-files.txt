@@ -495,9 +495,9 @@ vendor/lib/libpn553_fw.so|a7e6076f426314c0186af4c256868959ee636d5d
 vendor/bin/pd-mapper|8eb9717d2ee4da59c64ec89a85bf4e384663322b
 vendor/lib64/libpdmapper.so|859a6acc25bf64a0503f333e960bf99d322f9f7e
 
-# Peripheral manager - from sld_sprout RKQ1.210607.001-00WW_3_490
-vendor/bin/pm-proxy|42383b9163716d8e6d81f0516e9cf09f22ea8b06
-vendor/bin/pm-service|b0a5d3491615ef9a237d93a393082105e3c0097c
+# Peripheral manager - from Fairphone/FP3/FP3:13/6.A.028.1/gms-fb581341:user/release-keys
+vendor/bin/pm-proxy|910437c11108aa66e803bbc760ce3998d141a6b4
+vendor/bin/pm-service|98827a6bf6693033a7c767e3fb4f097b9075a0ef
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # QCC - from Fairphone/FP3/FP3:13/6.A.028.1/gms-fb581341:user/release-keys
