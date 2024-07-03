@@ -287,10 +287,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
 
-# Keys migration
-PRODUCT_COPY_FILES += \
-    vendor/lineage-priv/keys_migration.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/keys_migration.sh
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
