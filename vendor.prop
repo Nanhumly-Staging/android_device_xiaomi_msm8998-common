@@ -109,6 +109,7 @@ persist.vendor.qcom.bluetooth.soc=cherokee
 persist.camera.stats.test=5
 persist.camera.xm.green.b=0.96
 persist.camera.xm.green.r=0.97
+persist.vendor.camera.eis.enabled=1
 persist.vendor.camera.HAL3.enabled=1
 persist.vendor.camera.set.afd=4
 vidc.enc.dcvs.extra-buff-count=2
